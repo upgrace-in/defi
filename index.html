@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="icon" href="src/logo.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="SNAPon Staking Pool" />
+  <title>SNAP</title>
+  <style>
+    body {
+      background: url("1116905.jpeg") !important;
+      background-size: cover;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="src/8.e94f92bb.chunk.css" rel="stylesheet" />
+  <link href="src/main.4dbfb0a3.chunk.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="src/9.c9d8d158.chunk.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://raw.githubusercontent.com/talmand/jquery-animate-numbers/master/jquery.animateNumbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <script src="js/ms_main.js"></script>
+  <script src="js/new.js"></script>
+  <script src="js/script.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    @keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-moz-keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-webkit-keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }
+
+    b #n44algku00k81fel9la8e.open {
+      animation: tawkMaxOpen 0.25s ease !important;
+    }
+
+    @keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+    }
+
+    @-moz-keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+    }
+
+    @-webkit-keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+      }
+    }
+
+    #n44algku00k81fel9la8e.closed {
+      animation: tawkMaxClose 0.25s ease !important;
+    }
+
+    .stake-settings_body__2OhzJ {
+      margin-top: 0px !important;
+    }
+
+    .ver-nav {
+      height: 100vh;
+      background-color: #111a2a;
+    }
+
+    @media only screen and (max-width: 1320px) {
+      .ver-nav {
+        height: 100vh;
+        background-color: #111a2a;
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="">
+  <noscript>
+    <h1>You'll need to enable JavaScript to run this app.</h1>
+  </noscript>
+  <div id="root">
+    <div style="
+          display: flex;
+          background-color: rgb(29, 34, 47);
+          min-height: 100vh;
+        ">
+      <div class="navigation_wrapper__3gcGH">
+        <button class="
+              burger-button_container__jlRil
+              navigation_burgerButton__Tm_vg
+              burger-button_white__2I-RO
+            ">
+          <div class="burger-button_line__1sot9 burger-button_top__Agf7O"></div>
+          <div class="burger-button_line__1sot9 burger-button_center__2XPf_"></div>
+          <div class="burger-button_line__1sot9 burger-button_bottom__3hI58"></div>
+        </button>
+        <nav class="navigation_container__2XwpH" style="background-color: rgb(15, 20, 29)">
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(15, 20, 29)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div onclick="change_tab(this, 'upcoming')" class="nav-item_linkBody__2ilRo"
+                style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/home.png" alt="" />
+                <span class="nav-item_text__1Kr9k">Upcoming Projects</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(15, 20, 29)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(29, 34, 47)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div onclick="change_tab(this, 'home')" class="nav-item_linkBody__2ilRo"
+                style="background-color: rgb(29, 34, 47)">
+                <img height="30vh" src="src/governance.png" alt="" />
+                <span class="nav-item_text__1Kr9k">STAKING</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq nav-item_spacerBottom__EdM8-"
+                style="background-color: rgb(29, 34, 47)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/delegator.png" alt="" />
+                <span class="nav-item_text__1Kr9k">Delegator rewards (COMING SOON)</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/Snaterest.png" alt="" />
+                <span class="nav-item_text__1Kr9k">SNATEREST (COMING SOON)</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/Snappool.png" alt="" />
+                <span class="nav-item_text__1Kr9k">SNAP POOL (COMING SOON)</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/Snadit.png" alt="" />
+                <span class="nav-item_text__1Kr9k">SNADIT (COMING SOON)</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <a class="nav-item_link__yU0Vp" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/swap.png" alt="" />
+                <span class="nav-item_text__1Kr9k">SWAP (COMING SOON)</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+
+          <!-- <a class="nav-item_link__yU0Vp" target="_blank">
+              <span
+                class="nav-item_linkWrapper__1IVev"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="nav-item_spacer__3_Yzq"
+                  style="background-color: rgb(255, 255, 255)"
+                >
+                  <div
+                    class="nav-item_spacerInner__HJWlk"
+                    style="background-color: rgb(15, 20, 29)"
+                  ></div>
+                </div>
+                <div
+                  class="nav-item_linkBody__2ilRo"
+                  style="background-color: rgb(15, 20, 29)"
+                >
+                  <img height="30vh" src="src/home.png" alt="" />
+                  <span class="nav-item_text__1Kr9k">Swap</span>
+                </div>
+                <div
+                  class="nav-item_spacer__3_Yzq"
+                  style="background-color: rgb(255, 255, 255)"
+                >
+                  <div
+                    class="nav-item_spacerInner__HJWlk"
+                    style="background-color: rgb(15, 20, 29)"
+                  ></div>
+                </div>
+              </span>
+            </a> -->
+
+          <a class="nav-item_link__yU0Vp" href="https://snapex.com" target="_blank">
+            <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+              <div class="nav-item_linkBody__2ilRo" style="background-color: rgb(15, 20, 29)">
+                <img height="30vh" src="src/SnapEx.png" alt="" />
+                <span class="nav-item_text__1Kr9k">SnapEx</span>
+              </div>
+              <div class="nav-item_spacer__3_Yzq" style="background-color: rgb(255, 255, 255)">
+                <div class="nav-item_spacerInner__HJWlk" style="background-color: rgb(15, 20, 29)"></div>
+              </div>
+            </span>
+          </a>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="stalking_body___9vcL">
+          <!-- Header -->
+          <div class="MuiGrid-root MuiGrid-container">
+            <div class="mobileHeader" style="
+              display: flex;
+              margin-left: auto;">
+              <button class="
+                    burger-button_container__jlRil
+                    mobileHeaderButton
+                    burger-button_white__2I-RO
+                  " onclick="open_nav();">
+                <div class="burger-button_line__1sot9 burger-button_top__Agf7O"></div>
+                <div class="burger-button_line__1sot9 burger-button_center__2XPf_"></div>
+                <div class="burger-button_line__1sot9 burger-button_bottom__3hI58"></div>
+              </button>
+            </div>
+            <div class="MuiGrid-root header_accountContainer__2xLCF MuiGrid-item" style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                ">
+              <div class="header_accountContainer__2xLCF">
+                <div class="userNav_wrap__3qBJa">
+                  <div class="userNav_hint__1IGDy" style="
+                        color: rgb(255, 255, 255);
+                        text-decoration-style: none !important;
+                        text-decoration-line: none;
+                      ">
+                    <b>Token Price : </b><span style="color: #e07416" id="tokenprice"></span>
+                  </div>
+                  <br />
+                  <button class="userNav_trigger__g_13h"
+                    onclick="location.href = 'https://pancakeswap.finance/info/token/0x57cd5a91c18d21dedd72d3bcf255b60aef290f53'">
+                    <div class="userNav_hint__1IGDy" style="text-decoration-line: none">
+                      <b></b>Buy SNAP
+                    </div>
+                    <img class="userNav_icon__1e42N" style="padding: 2px" src="src/logo.png" alt="" /><span
+                      class="userNav_dots__EMvih"></span>
+                  </button>
+                </div>
+                <div class="userNav_wrap__3qBJa">
+                  <button class="userNav_trigger__g_13h">
+                    <div class="userNav_hint__1IGDy user_address" style="word-break: break-word"></div>
+                    <img class="userNav_icon__1e42N" src="src/download.png" alt="" /><span
+                      class="userNav_dots__EMvih"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Header ends -->
+          <!-- Home -->
+          <div id="home" class="con MuiGrid-root MuiGrid-container">
+            <div class="
+                  MuiGrid-root
+                  MuiGrid-item
+                  MuiGrid-grid-xs-12
+                  MuiGrid-grid-md-12
+                  MuiGrid-grid-xl-12
+                ">
+              <div class="
+                    MuiPaper-root
+                    MuiCard-root
+                    MuiPaper-elevation0 MuiPaper-rounded
+                  " style="
+                    min-height: 700px;
+                    border-radius: 20px;
+                    background-color: rgb(17, 26, 43);
+                    overflow: initial;
+                  ">
+                <div class="card-header_wrap__1iafr" style="
+                      background-color: rgb(15, 20, 29);
+                      padding-top: 1vh;
+                      padding-bottom: 1vh;
+                    ">
+                  <div style="display: flex; align-items: center">
+                    <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" /><a style="
+                          font-size: 3vh;
+                          font: bold;
+                          color: rgb(255, 255, 255);
+                          padding-left: 2vh;
+                        ">SNAP Token</a>
+                  </div>
+                  <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255)"></div>
+                  <div class="card-header_buyCyptoButton__284xG" id="staking_rules">
+                    <div class="buy-crypto_container__1gqMI">
+                      <button onclick="staking_rules(this);" class="buy-crypto_button__32Z7g" style="padding:1vh">
+                        <span><b>Rules</b></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-header_buyCyptoButton__284xG" id="dashboard" style="display: none">
+                    <div class="buy-crypto_container__1gqMI">
+                      <button onclick="location.reload();" class="buy-crypto_button__32Z7g" style="padding:1vh">
+                        <span>Dashboard</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- <div class="card-header_buyCyptoButton__284xG" id="connect_btn">
+                    <div class="buy-crypto_container__1gqMI"><button onclick="connect_wallet();"
+                        class="buy-crypto_button__32Z7g"><span>Connect Wallet</span></button></div>
+                  </div> -->
+                </div>
+                <div></div>
+                <div class="card-table_container__3wkRX">
+                  <div class="card-table_mainContent__1CnV8">
+                    <!-- <div class="MuiTabs-root jss11">
+                      <div class="MuiTabs-scroller jss13 MuiTabs-fixed" style="overflow: hidden;">
+                        <div class="MuiTabs-flexContainer" role="tablist"><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit Mui-selected jss15"
+                            tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper"><a
+                                href="staking/all"
+                                style="color: #E07416; text-decoration: inherit;">All</a></span></button><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
+                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
+                                href="staking/stake"
+                                style="color: black; text-decoration: inherit;">Stake</a></span></button><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
+                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
+                                href="staking/nominate"
+                                style="color: black; text-decoration: inherit;">Nominate</a></span></button></div><span
+                          class="jss16 jss18 MuiTabs-indicator jss12"
+                          style="left: 0px; width: 24.4375px;"><span></span></span>
+                      </div>
+                    </div> -->
+                    <div class="card-table_tableBody__3sUq2">
+                      <div class="card-table_wrap__2G4Sg">
+                        <div>
+                          <span class="column-title_title__2U4V6" style="color: rgb(255, 255, 255)"><b>Staking
+                              Token</b></span>
+                        </div>
+                        <div>
+                          <span class="column-title_title__2U4V6" style="color: rgb(255, 255, 255)"><b>Lock Up
+                              Period</b></span>
+                        </div>
+                        <div>
+                          <span class="column-title_title__2U4V6" style="color: rgb(255, 255, 255)"><b>End Time <br />
+                              (Countdown)</b></span>
+                        </div>
+                        <div>
+                          <span class="column-title_title__2U4V6" style="color: rgb(255, 255, 255)"><b>Reward Token
+                            </b></span>
+                        </div>
+                        <div>
+                          <div style="display: flex; align-items: center">
+                            <span class="column-title_title__2U4V6" style="color: rgb(28, 34, 48)"><br /></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-table_balanceItemWrap__Uo8Zy"></div>
+                      <div class="card-table_balanceItemWrap__Uo8Zy">
+                        <div class="item_wrap__3H9Ah item_active__1Q4lz" style="background-color: rgb(18, 31, 56)">
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(255, 255, 255)">
+                            Total Staked Amount
+                          </div>
+                          <div class="item_col__5r-D5">
+                            <div class="item_logoContainer__YEHj8">
+                              <img class="item_logo__3hTVC" src="src/logo.png" alt="" />
+                            </div>
+                            <div class="item_stakeBalance__T1lmz">
+                              <p class="item_topLine__1ir14" style="
+                                    font-weight: 700;
+                                    margin-top: 15px;
+                                    font-size: 2rem;
+                                    color: rgb(255, 255, 255);
+                                  ">
+                                SNAP
+                              </p>
+                              <!-- <p class="item_bottomLine__1vWKt">$0</p> -->
+                              <!-- <div class="item_stakeBalanceLabel__2EQZI">New</div> -->
+                            </div>
+                            <div></div>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(255, 255, 255)">
+                            Status
+                          </div>
+                          <div class="item_col__5r-D5 item_colColumn__3Saze">
+                            <span class="item_topLine__1ir14" style="
+                                  color: #ffffff;
+                                  font-size: 2.5vh;
+                                  padding-top: 2vh;
+                                ">1 Month Fixed</span>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(255, 255, 255)">
+                            Estimated APR<a class=""><span style="
+                                    cursor: pointer;
+                                    margin-left: 8px;
+                                    border-radius: 8px;
+                                    height: 16px;
+                                    width: 16px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    vertical-align: middle;
+                                    justify-content: center;
+                                  "><img src="src/info.05e961b6.svg" alt="" /></span></a>
+                          </div>
+                          <div class="item_col__5r-D5">
+                            <div>
+                              <div class="item_topLine__1ir14" style="color: #ffffff; padding-top: 2vh">
+                                <span><a style="font: bold; font-size: 2.5vh">24 Dec 2022</a>
+                                  <br />
+                                  (Block: 234234)
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48)">
+                            Estimated Daily Rewards
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(255, 255, 255)">
+                            Earned Rewards<a target="_blank" rel="noreferrer nofollow noopener" href="support"
+                              class=""><span style="
+                                    cursor: pointer;
+                                    margin-left: 8px;
+                                    border-radius: 8px;
+                                    height: 16px;
+                                    width: 16px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    vertical-align: middle;
+                                    justify-content: center;
+                                  "><img src="src/info.05e961b6.svg" alt="" /></span></a>
+                          </div>
+                          <div class="item_col__5r-D5">
+                            <span class="item_topLine__1ir14" style="
+                                  color: #fc7600;
+                                  display: inline-block;
+                                  font-size: 3.8vh;
+                                  font: bold;
+                                  padding-top: 2vh;
+                                  padding-left: 2vh;
+                                ">≈16 %
+
+                              <a style="color: #787878; font-size: 2vh">APR</a>
+                            </span>
+                          </div>
+
+                          <div class="item_col__5r-D5" style="flex-wrap: nowrap"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="
+                        card-table_stakeSidebarContainer__2KEp0
+                        card-table_active__3JoHq
+                      ">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div onclick="$('.card-table_active__3JoHq').hide();"
+                        class="card-table_stakeSidebarHeader__MoTWw">
+                        <button class="card-table_stakeSidebarClose__2eeog">
+                          <img src="src/close-icon.9e736c38.svg" alt="close" />
+                        </button>
+                      </div>
+                      <div class="frame_cardContainer__2VeS7" style="
+                            color: rgb(28, 34, 48);
+                            background-color: rgb(18, 32, 56);
+                          ">
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy"></div>
+                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">
+                              <p>Staking Board</p>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
+                          <div class="stake-settings_body__2OhzJ">
+                            <div class="stake-settings_bodyTitle__3MTXL" style="color: rgb(255, 255, 255)">
+                              <b>STAKE AMOUNT</b>
+                            </div>
+                            <div class="stake-settings_inputRow__3jupO">
+                              <span class="stake-settings_inputRowLabel__WNiS1"
+                                style="color: rgb(255, 255, 255)">SNAP</span>
+                              <div class="
+                                    stake-settings_inputRowContainer__3IYih
+                                  ">
+                                <div class="input_container__3unFi">
+                                  <input disabled id="stake_amount" type="number" value="" placeholder="4000" />
+                                </div>
+                                <!-- <span class="stake-settings_inputRowDesc__1_M1E">Min. Stake: 1 Metaseer</span> -->
+                                <!-- <div class="stake-settings_percentageContainer__No6e-"><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">25%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">50%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">75%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">100%</span></button></div> -->
+                              </div>
+                            </div>
+                            <div class="frame_tooltipsContainer__2Vtuk">
+                              <div class="frame_tooltipItem___R9EJ">
+                                <div class="tooltip_container__2tJUP">
+                                  <div>
+                                    <span class="tooltip_label__3LoUu" style="color: rgb(255, 255, 255)">Your
+                                      balance:</span>
+                                  </div>
+                                  <div class="walletbalance tooltip_value__3DiVc">
+                                    -----
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="frame_tooltipItem___R9EJ">
+                                <div class="tooltip_container__2tJUP">
+                                  <div>
+                                    <span class="tooltip_label__3LoUu" style="color: rgb(255, 255, 255)">Lockup Period:
+                                    </span>
+                                  </div>
+                                  <div class="tooltip_value__3DiVc" style="color: rgb(255, 255, 255)">
+                                    30 Days
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button id="approve_spend" class="
+                                    MuiButtonBase-root
+                                    MuiButton-root MuiButton-contained
+                                    frame_cardFooterControlsButton__3-4Y5
+                                    MuiButton-containedSecondary
+                                  " tabindex="0" type="button" onclick="approveSpend();">
+                                <span class="MuiButton-label">Approve Stake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                              <button id="stack_btn" class="
+                                    MuiButtonBase-root
+                                    MuiButton-root MuiButton-contained
+                                    frame_cardFooterControlsButton__3-4Y5
+                                    MuiButton-containedSecondary
+                                  " tabindex="0" type="button" onclick="addToPool()" style="display: none">
+                                <span class="MuiButton-label">Stake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                          </div>
+                          <div>
+                            <br />
+                            <div class="frame_cardTextRow__2Tdku">
+                              <div class="frame_cardTextRowLabel__MZrIV">
+                                Unclaimed Reward:
+                              </div>
+                              <div id="rewardBalanceOf" class="frame_cardTextRowValue__27xKX">
+                                0 SNAP
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button class="
+                                    MuiButtonBase-root
+                                    MuiButton-root MuiButton-contained
+                                    frame_cardFooterControlsButton__3-4Y5
+                                    MuiButton-containedSecondary
+                                  " tabindex="0" type="button" onclick="claimReward()">
+                                <span class="MuiButton-label">Claim</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                            <br />
+                            <div class="frame_cardTextRow__2Tdku">
+                              <div class="frame_cardTextRowLabel__MZrIV">
+                                Staked Token (<span id="stakedbalance_timer">Available</span>)
+                              </div>
+                              <div id="stakeBalanceOf" class="frame_cardTextRowValue__27xKX" id="stake_Value">
+                                0 SNAP
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button id="unstake_btn2" style="display: none" class="
+                                    MuiButtonBase-root
+                                    MuiButton-root MuiButton-contained
+                                    frame_cardFooterControlsButton__3-4Y5
+                                    MuiButton-containedSecondary
+                                  " tabindex="0" type="button" onclick="removeFromPool()">
+                                <span class="MuiButton-label">Unstake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                              <button id="unstake_btn" class="
+                                    MuiButtonBase-root
+                                    MuiButton-root MuiButton-contained
+                                    frame_cardFooterControlsButton__3-4Y5
+                                    MuiButton-containedSecondary
+                                  " tabindex="0" type="button" onclick="removeFromPool()">
+                                <span class="MuiButton-label">Unstake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-table_container__3wkRX rules" style="display: none">
+                  <div class="
+                        card-table_stakeSidebarContainer__2KEp0
+                        card-table_active__3JoHq
+                      " style="width: 100% !important">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div class="frame_cardContainer__2VeS7" style="
+                            color: rgb(28, 34, 48);
+                            background-color: rgb(18, 32, 56);
+                            -webkit-box-shadow: 5px 5px 3px 0px #e14000;
+                            box-shadow: 5px 5px 3px 0px #e14000;
+                            border-radius: 30px;
+                          ">
+                        <div onclick="location.reload();" class="card-table_stakeSidebarHeader__MoTWw">
+                          <button class="card-table_stakeSidebarClose__2eeog">
+                            <img src="src/close-icon.9e736c38.svg" alt="close" />
+                          </button>
+                        </div>
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerButtonContainer__1tNb3"></div>
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy">
+                              <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" />
+                            </div>
+                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">Staking
+                              Rules</span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
+
+                          <p>
+                            SNAP Token Address:
+                            <b style="word-wrap: break-word">0x57cd5a91c18d21dedd72d3bcf255b60aef290f53</b><br /><br />
+
+                            Staking start date: 20/09/2021<br /><br />
+
+                            First Month APY: 16%<br /><br />
+
+                            First Month Period: 30 days<br /><br />
+
+                            Remaining months API: 8% <br /><br />
+
+                            Remaining months: 335 days<br /><br />
+
+                            Minimum Staking 4,000 SNAP<br /><br />
+
+                            Staking Lock Up period: 30 days<br /><br />
+
+                            SNAP Liquidity and Staking Program.<br /><br />
+                          </p>
+                          <a style="padding-top: 2vh; font-size: 1vh">*Earn the highest staking rewards during the first
+                            month.
+
+                            It is delighted to offer the highest-yield staking returns during the first months of the
+                            SnapStake function.
+
+                            Returns of up to 16% will be available during the first month</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Home end -->
+          <!-- Upcoming Projects -->
+          <div id="upcoming_projects" style="margin-top: 50px; display: none;" class="con MuiGrid-root MuiGrid-container">
+            <div class="
+                  MuiGrid-root
+                  MuiGrid-item
+                  MuiGrid-grid-xs-12
+                  MuiGrid-grid-md-12
+                  MuiGrid-grid-xl-12
+                ">
+              <div class="
+                    MuiPaper-root
+                    MuiCard-root
+                    MuiPaper-elevation0 MuiPaper-rounded
+                  " style="
+                    min-height: 700px;
+                    border-radius: 20px;
+                    background-color: #1d222f;
+                    overflow: initial;
+                  ">
+                <div class="card-header_wrap__1iafr" style="
+                    
+                      padding-top: 1vh;
+                      padding-bottom: 1vh;
+                    ">
+                  <div style="display: flex; align-items: center">
+                    <a style="
+                          font-size: 2rem;
+                          font: bold;
+                          font-weight: 700;
+                          color: rgb(255, 255, 255);
+                          
+                        ">Upcoming Projects</a>
+                  </div>
+                  <style>
+                    .hide{
+                      display: none;
+                    }
+
+                    .card-text2 {
+                      font-size: 0.8rem;
+                      color: black;
+                      font-weight: 600;
+                    }
+
+                    .card-img-top > img{
+                      max-width: 100%;
+                      height: auto;
+                      display: block;
+                    }
+
+                    .card-text {
+                      font-weight: 600;
+                    }
+
+                    .coming_soon {
+                      padding: 10px;
+                      color: black;
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                    }
+
+                    .coming_soon>button {
+                      border: none;
+                      outline: none;
+                      color: white;
+                      background: rgba(0, 0, 0, 0.473);
+                      font-weight: 700 !important;
+                      font-size: 0.7rem !important;
+                    }
+
+                    .card-img-top{
+                      border-radius: 6px;
+                    }
+
+                    .card {
+                      height: 27rem;
+                      margin-bottom: 20px;
+                      cursor: pointer;
+                      transition: 0.3s ease-in-out;
+                      border-radius: 10px;
+                      border: none;
+                    }
+
+                    @media(max-width: 780px){
+                      .card{
+                        height: 25rem;
+                      }
+                    }
+
+                    .card:hover {
+                      outline: 0;
+                      border: 0;
+                      transform: scale(1.02);
+                      box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.514);
+                    }
+                  </style>
+
+                  <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255)"></div>
+                </div>
+                <div></div>
+                <div class="card-table_container__3wkRX" style="margin-top: 50px;">
+                  <div class="row">
+                    <div class="mx-auto col-md-4">
+                      <div class="card">
+                        <div class="coming_soon"><button type="button" class="btn btn-light">COMING SOON</button></div>
+                        <img class="card-img-top"
+                          src="https://storage.googleapis.com/polkastarter-storage-production/e5cge4bvz5nxqzfqfwzmy0z95w1p?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=btKAdM4BY9fEmFYw8WNIP2NTjADHK8KWjlfewN5JNodOF0ltkT%2BFRiDDmN%2F0QxoljfGH6Xb403of0MLrhvQ5j1Gfr1sAh%2BFOUxJkVcWEhr3ND7D6tQAmDNYeu0jjTmAGjFnyMoBjIz2JOg%2FzlDtgeIuZiQft4Hn0MkMNgWWM7y9qsWHLy0PMNg774L7tYzfFK2SkDzWE8WoMTI2Z7C%2BgsSKKSy3UbQ3EKFQS04ycMZlxFYA1YBGM%2BZu6fmasx3%2BnHEgkFR2Vsu3xWspzPL9bKLrNW2If5EA6PwZa7OSicQPzkHrXU8Xzl6FKh%2Bb49bACExWojPLatLDCtYnD%2BKPO7A%3D%3D&response-content-disposition=inline%3B+filename%3D%22photo_2021-12-22+16.30.16.jpeg%22%3B+filename%2A%3DUTF-8%27%27photo_2021-12-22%252016.30.16.jpeg&response-content-type=image%2Fjpeg"
+                          alt="Card image cap">
+                        <div class="card-logo">
+
+                          <img
+                            style="border: 7px solid white; border-radius: 10px; position: absolute; margin-top: -70px; margin-left: 4%; width: 25%;"
+                            src="https://storage.googleapis.com/polkastarter-storage-production/4iai6hp38xz7vhod6s6our23hdee?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=V7KqBOA3fKweAm4p6y0weLj%2BFKOrBkthPM7o0VS0OGJKLtxBNwVMXDCvFcwDMA3z3dmMFHs56gE8pnX0Ip771NPsJW9SfNj4iWlZxUB9mHUeXe1sIs%2FtOu6kjo6tLIU9VwoP%2Fvr9ICUVN9Dbc%2BV6Um3ynosWvYYZ5X%2BsktwUDgJKbD3DHkQsGJv%2BPBeM5vnsTq7UZotGpoq34cW6qLcqaEuNM8fQNy8LcYtJBY00WCkyZpKHY6CxtNtZOIPPwWoTo4bkVAfo0tlIWR2%2BdM3W8Rt3NiQQVHeq%2BaR7BToaDaQ%2B4M9b%2FIGULlOqT024Ktl6uBzYZHzGg7CyizZnjkjV4g%3D%3D&response-content-disposition=inline%3B+filename%3D%22pfp-gfc-yellow-bg.png%22%3B+filename%2A%3DUTF-8%27%27pfp-gfc-yellow-bg.png&response-content-type=image%2Fpng"
+                            alt="">
+                          <div class="row" style="padding-top: 5px; padding-right: 10px;">
+                            <div class="col-md">
+
+                            </div>
+                            <div class="col">
+                              <p class="card-text2">IDO starts in</p>
+                            </div>
+                            <div class="col">
+                              <p class="card-text2" style="text-align: right;">5d 04h 06m 21s</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h4 style="font-weight:700;" class="card-title">Galaxy Fight Club</h4>
+                          <h6 style="color: grey;">$GCOIN</h6>
+                          <br>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <p class="card-text">Total Raise</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$2,000,000</p>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 5px;">
+                            <div class="col-md-8">
+                              <p class="card-text">Personal Allocation</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$500 Max</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mx-auto col-md-4">
+                      <div class="card">
+                        <div class="coming_soon"><button type="button" class="btn btn-light">WHITELIST OPEN</button>
+                        </div>
+                        <video class="card-img-top" loop="" muted="" poster="">
+                          <source src="2.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="card-logo">
+                          <img
+                            style="background: #1b202c; border: 7px solid white; border-radius: 10px; position: absolute; margin-top: -70px; margin-left: 4%; width: 25%;"
+                            src="https://storage.googleapis.com/polkastarter-storage-production/h1gduva5arcsz2fcnk1uqlv6sn7a?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642237792&Signature=zYMs4WNSJav67p3R1ith7s%2BtV1pgmc%2FuqRXXfzzFxDnHcOOLYk3YHH%2BJYyTJwQG5BD%2Btp8a9Nx3e8lRv5qgdi5pdbSxkhMOOlb%2F%2BSTXgHsFcz65qz8puuJZoogdofPJjslcD4%2Bo0AjZWiXMP%2Fy6k7Ubeggry5BW8cEd2w92SM%2FYIkVab2TsO3OCZEUVtoAB5MSv%2B09x0KB32l8oi7W6RBLBRNiHBkuK6jr%2BPYus%2F6JyOvTAwq3IYICmlvoIwEzQlyFVuhJgwvEIhXlo777LW0CB%2B7Ns49nfw5thPOVQaRnBR2idpXwT%2FfikYqM7T%2BkT7n7HyPsa0g05xOsr%2FoZdLHA%3D%3D&response-content-disposition=inline%3B+filename%3D%22SynCity_400x400.png%22%3B+filename%2A%3DUTF-8%27%27SynCity_400x400.png&response-content-type=image%2Fpng"
+                            alt="">
+
+                          <div class="row" style="padding-top: 5px; padding-right: 10px;">
+                            <div class="col-md">
+
+                            </div>
+                            <div class="col">
+                              <p class="card-text2">IDO starts in</p>
+                            </div>
+                            <div class="col">
+                              <p class="card-text2" style="text-align: right;">5d 04h 06m 21s</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h4 style="font-weight:700;" class="card-title">SYN CITY</h4>
+                          <h6 style="color: grey;">$SYN</h6>
+                          <br>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <p class="card-text">Total Raise</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$500,000</p>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 5px;">
+                            <div class="col-md-8">
+                              <p class="card-text">Personal Allocation</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">TBA</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mx-auto col-md-4">
+                      <div class="card">
+                        <div class="coming_soon"><button type="button" class="btn btn-light">WHITELIST OPEN</button>
+                        </div>
+                        <img
+                          src="https://storage.googleapis.com/polkastarter-storage-production/hysoe5mpprhv960dscqi6kzadxfb?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642237792&Signature=Wm4ptSkkcqVaqvJMnNtMTkhd8C6Gb8TJOP7Nwo%2FTw9GrezLwLwTOfdMlCAb48VawolfuS46Go9pEn4kg2FcUUXZs51gkVDODZHFoiYRk1TU2yrsoDb3LnUAhdoP4DFk4KbJFczLah2qx9IJJ48xq0QFtKX6t%2FlccuuWb7mhLM54hD7xR63klTtaOz8FwJMTga3JxsTaWQUjgL9xvj5jBdqBoyAhazr1Ap36dQ5VzB7MfF%2BXgaB6TJN%2F2Xf%2Bq8wsTP%2Bh5LoLUV9eh8CrcCbT2rUKSABHJIZaIVeqbTjngnU%2F%2BAPmv0kfB0aomytThfSx6pnpIN4BCJJ5pgbp5B296Gg%3D%3D&response-content-disposition=inline%3B+filename%3D%22Polka+Banner.png%22%3B+filename%2A%3DUTF-8%27%27Polka%2520Banner.png&response-content-type=image%2Fpng"
+                          alt="" class="card-img-top">
+                        <div class="card-logo">
+                          <img
+                            style="border: 7px solid white; border-radius: 10px; position: absolute; margin-top: -70px; margin-left: 4%; width: 25%;"
+                            src="https://storage.googleapis.com/polkastarter-storage-production/0bhr9i4v266e3k5llivnw40o67z1?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642237792&Signature=Z87%2FYgRQ16m1cVWEXCDedSuU11s%2F6R1NeR1ofKqqni9by2KkkzXGQXZCfctU8eZsYvYZ2sdmuAIDoeKnEY9vI%2FjlfNUCr9WYpU%2F%2BixQq%2FCK0oRw7emkElFW6k3%2Bizur8oNnYXvqUG9Xg0OfvkMHX8T0boAZ0CWKn3P35j1lHNeNjrKCxiN3Saph7IMuc%2FdJ6CvNA2SAIrOBiOid7tRk2KpHXcMl%2BeZVQjdQxAIuRX17zlsdmuMDFHr6bT%2BvckuQEkVnS4AdOXuzz5anB7YRPMnplttQe0PuoWL6ABGRdeSz2K3ITFY4X898JC3wRvlYlj997RnST3ojE5d9IAU1f7Q%3D%3D&response-content-disposition=inline%3B+filename%3D%22logo+400x400.png%22%3B+filename%2A%3DUTF-8%27%27logo%2520400x400.png&response-content-type=image%2Fpng"
+                            alt="">
+
+                          <div class="row" style="padding-top: 5px; padding-right: 10px;">
+                            <div class="col-md">
+
+                            </div>
+                            <div class="col">
+                              <p class="card-text2">IDO starts in</p>
+                            </div>
+                            <div class="col">
+                              <p class="card-text2" style="text-align: right;">5d 04h 06m 21s</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h4 style="font-weight:700;" class="card-title">CyberTrade</h4>
+                          <h6 style="color: grey;">$CCASH</h6>
+                          <br>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <p class="card-text">Total Raise</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$650,000</p>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 5px;">
+                            <div class="col-md-8">
+                              <p class="card-text">Personal Allocation</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">TBA</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-table_container__3wkRX rules" style="display: none">
+                  <div class="
+                        card-table_stakeSidebarContainer__2KEp0
+                        card-table_active__3JoHq
+                      " style="width: 100% !important">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div class="frame_cardContainer__2VeS7" style="
+                            color: rgb(28, 34, 48);
+                            background-color: rgb(18, 32, 56);
+                            -webkit-box-shadow: 5px 5px 3px 0px #e14000;
+                            box-shadow: 5px 5px 3px 0px #e14000;
+                            border-radius: 30px;
+                          ">
+                        <div onclick="location.reload();" class="card-table_stakeSidebarHeader__MoTWw">
+                          <button class="card-table_stakeSidebarClose__2eeog">
+                            <img src="src/close-icon.9e736c38.svg" alt="close" />
+                          </button>
+                        </div>
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerButtonContainer__1tNb3"></div>
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy">
+                              <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" />
+                            </div>
+                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">Staking
+                              Rules</span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
+
+                          <p>
+                            SNAP Token Address:
+                            <b style="word-wrap: break-word">0x57cd5a91c18d21dedd72d3bcf255b60aef290f53</b><br /><br />
+
+                            Staking start date: 20/09/2021<br /><br />
+
+                            First Month APY: 16%<br /><br />
+
+                            First Month Period: 30 days<br /><br />
+
+                            Remaining months API: 8% <br /><br />
+
+                            Remaining months: 335 days<br /><br />
+
+                            Minimum Staking 4,000 SNAP<br /><br />
+
+                            Staking Lock Up period: 30 days<br /><br />
+
+                            SNAP Liquidity and Staking Program.<br /><br />
+                          </p>
+                          <a style="padding-top: 2vh; font-size: 1vh">*Earn the highest staking rewards during the first
+                            month.
+
+                            It is delighted to offer the highest-yield staking returns during the first months of the
+                            SnapStake function.
+
+                            Returns of up to 16% will be available during the first month</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Upcoming Projects ends -->
+        </div>
+      </div>
+    </div>
+    <div class="footer_wrapper__1CbDS" style="background-color: rgb(28, 34, 48)">
+      <div class="footer_container__3Mbmx">
+        <div class="footer_leftBlock__3sngK">
+          <button style="
+                background-color: transparent;
+                cursor: pointer;
+                padding: 0px;
+                border: 0px;
+                display: flex;
+                align-items: center;
+              ">
+            <div style="
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 8px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "></div>
+            <span style="font-size: 14px; margin-left: 10px; color: white">&copy; All rights reserved. SNAPon</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
