@@ -82,6 +82,10 @@ body {
     outline: 0;
 }
 
+ul > li{
+  line-height: 1.7rem;
+}
+
 .dash{
   background: none;
 }
@@ -106,6 +110,11 @@ body {
 
 .rw>* {
     width: auto !important;
+}
+
+.c2{
+  width: 20rem; 
+  height: auto !important;
 }
 
 @media(max-width: 780px) {
@@ -197,7 +206,7 @@ a:hover {
 }
 
 .big-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     font-weight: 700;
 }

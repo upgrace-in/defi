@@ -13,6 +13,18 @@ function change_tab(e, type) {
     $(e).css({ 'background-color': 'rgb(29, 34, 47)' })
 }
 
+function change_to_me(e, type, number) {
+    $('.tab-menu').removeClass('act');
+    $(e).addClass('act');
+    $('.details').hide();
+
+    if (type == 'description') {
+      $('.desc-' + number).fadeIn();
+    } else {
+      $('.token-' + number).fadeIn();
+    }
+  }
+
 function open_nav() {
     $('.nav-item_text__1Kr9k').hide();
     if ($('.navigation_wrapper__3gcGH:visible').length == 1) {
