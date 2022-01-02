@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="icon" href="src/logo.png" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,6 +12,12 @@
   <meta name="description" content="SNAPon Staking Pool" />
   <title>SNAP</title>
   <style>
+    .fab {
+      width: auto !important;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: url("1116905.jpeg") !important;
       background-size: cover;
@@ -37,104 +46,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-  <style type="text/css">
-    @keyframes tawkMaxOpen {
-      0% {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-    }
-
-    @-moz-keyframes tawkMaxOpen {
-      0% {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-    }
-
-    @-webkit-keyframes tawkMaxOpen {
-      0% {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-    }
-
-    b #n44algku00k81fel9la8e.open {
-      animation: tawkMaxOpen 0.25s ease !important;
-    }
-
-    @keyframes tawkMaxClose {
-      from {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-
-      to {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-    }
-
-    @-moz-keyframes tawkMaxClose {
-      from {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-
-      to {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-    }
-
-    @-webkit-keyframes tawkMaxClose {
-      from {
-        opacity: 1;
-        transform: translate(0, 0px);
-      }
-
-      to {
-        opacity: 0;
-        transform: translate(0, 30px);
-      }
-    }
-
-    #n44algku00k81fel9la8e.closed {
-      animation: tawkMaxClose 0.25s ease !important;
-    }
-
-    .stake-settings_body__2OhzJ {
-      margin-top: 0px !important;
-    }
-
-    .ver-nav {
-      height: 100vh;
-      background-color: #111a2a;
-    }
-
-    @media only screen and (max-width: 1320px) {
-      .ver-nav {
-        height: 100vh;
-        background-color: #111a2a;
-        display: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="src/new.css">
 </head>
 
 <body class="">
@@ -339,7 +251,7 @@
           </div>
           <!-- Header ends -->
           <!-- Home -->
-          <div id="home" style="display: none;" class="con MuiGrid-root MuiGrid-container">
+          <div id="home" class="con MuiGrid-root MuiGrid-container">
             <div class="
                   MuiGrid-root
                   MuiGrid-item
@@ -385,33 +297,10 @@
                       </button>
                     </div>
                   </div>
-                  <!-- <div class="card-header_buyCyptoButton__284xG" id="connect_btn">
-                    <div class="buy-crypto_container__1gqMI"><button onclick="connect_wallet();"
-                        class="buy-crypto_button__32Z7g"><span>Connect Wallet</span></button></div>
-                  </div> -->
                 </div>
                 <div></div>
                 <div class="card-table_container__3wkRX">
                   <div class="card-table_mainContent__1CnV8">
-                    <!-- <div class="MuiTabs-root jss11">
-                      <div class="MuiTabs-scroller jss13 MuiTabs-fixed" style="overflow: hidden;">
-                        <div class="MuiTabs-flexContainer" role="tablist"><button
-                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit Mui-selected jss15"
-                            tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper"><a
-                                href="staking/all"
-                                style="color: #E07416; text-decoration: inherit;">All</a></span></button><button
-                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
-                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
-                                href="staking/stake"
-                                style="color: black; text-decoration: inherit;">Stake</a></span></button><button
-                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
-                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
-                                href="staking/nominate"
-                                style="color: black; text-decoration: inherit;">Nominate</a></span></button></div><span
-                          class="jss16 jss18 MuiTabs-indicator jss12"
-                          style="left: 0px; width: 24.4375px;"><span></span></span>
-                      </div>
-                    </div> -->
                     <div class="card-table_tableBody__3sUq2">
                       <div class="card-table_wrap__2G4Sg">
                         <div>
@@ -747,6 +636,7 @@
             </div>
           </div>
           <!-- Home end -->
+
           <!-- Upcoming Projects -->
           <div id="upcoming_projects" style="margin-top: 50px; display: none;"
             class="con MuiGrid-root MuiGrid-container">
@@ -781,71 +671,7 @@
                           
                         ">Upcoming Projects</a>
                   </div>
-                  <style>
-                    .hide {
-                      display: none;
-                    }
 
-                    .card-text2 {
-                      font-size: 0.8rem;
-                      color: black;
-                      font-weight: 600;
-                    }
-
-                    .card-img-top>img {
-                      max-width: 100%;
-                      height: auto;
-                      display: block;
-                    }
-
-                    .card-text {
-                      font-weight: 600;
-                    }
-
-                    .coming_soon {
-                      padding: 10px;
-                      color: black;
-                      position: absolute;
-                      top: 0;
-                      right: 0;
-                    }
-
-                    .coming_soon>button {
-                      border: none;
-                      outline: none;
-                      color: white;
-                      background: rgba(0, 0, 0, 0.473);
-                      font-weight: 700 !important;
-                      font-size: 0.7rem !important;
-                    }
-
-                    .card-img-top {
-                      border-radius: 6px;
-                    }
-
-
-                    .card {
-                      height: 27rem;
-                      margin-bottom: 20px;
-                      cursor: pointer;
-                      transition: 0.3s ease-in-out;
-                      border-radius: 10px;
-                      border: none;
-                    }
-
-                    @media(max-width: 780px) {
-                      .card {
-                        height: 25rem;
-                      }
-                    }
-
-                    .card:hover {
-                      outline: 0;
-                      border: 0;
-                      transform: scale(1.02);
-                      box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.514);
-                    }
-                  </style>
 
                   <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255)"></div>
                 </div>
@@ -853,7 +679,7 @@
                 <div class="card-table_container__3wkRX" style="margin-top: 50px;">
                   <div class="row">
                     <div class="mx-auto col-md-4">
-                      <div class="card">
+                      <div onclick="open_project('1');" class="card">
                         <div class="coming_soon"><button type="button" class="btn btn-light">COMING SOON</button></div>
                         <img class="card-img-top"
                           src="https://storage.googleapis.com/polkastarter-storage-production/e5cge4bvz5nxqzfqfwzmy0z95w1p?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=btKAdM4BY9fEmFYw8WNIP2NTjADHK8KWjlfewN5JNodOF0ltkT%2BFRiDDmN%2F0QxoljfGH6Xb403of0MLrhvQ5j1Gfr1sAh%2BFOUxJkVcWEhr3ND7D6tQAmDNYeu0jjTmAGjFnyMoBjIz2JOg%2FzlDtgeIuZiQft4Hn0MkMNgWWM7y9qsWHLy0PMNg774L7tYzfFK2SkDzWE8WoMTI2Z7C%2BgsSKKSy3UbQ3EKFQS04ycMZlxFYA1YBGM%2BZu6fmasx3%2BnHEgkFR2Vsu3xWspzPL9bKLrNW2If5EA6PwZa7OSicQPzkHrXU8Xzl6FKh%2Bb49bACExWojPLatLDCtYnD%2BKPO7A%3D%3D&response-content-disposition=inline%3B+filename%3D%22photo_2021-12-22+16.30.16.jpeg%22%3B+filename%2A%3DUTF-8%27%27photo_2021-12-22%252016.30.16.jpeg&response-content-type=image%2Fjpeg"
@@ -901,7 +727,7 @@
                     </div>
 
                     <div class="mx-auto col-md-4">
-                      <div class="card">
+                      <div onclick="open_project('2');" class="card">
                         <div class="coming_soon"><button type="button" class="btn btn-light">WHITELIST OPEN</button>
                         </div>
                         <video class="card-img-top" loop="" muted="" poster="">
@@ -950,7 +776,7 @@
                       </div>
                     </div>
                     <div class="mx-auto col-md-4">
-                      <div class="card">
+                      <div onclick="open_project('3');" class="card">
                         <div class="coming_soon"><button type="button" class="btn btn-light">WHITELIST OPEN</button>
                         </div>
                         <img
@@ -1000,177 +826,14 @@
                   </div>
                 </div>
 
-                <div class="card-table_container__3wkRX rules" style="display: none">
-                  <div class="
-                        card-table_stakeSidebarContainer__2KEp0
-                        card-table_active__3JoHq
-                      " style="width: 100% !important">
-                    <div class="card-table_stakeSidebar__1kGgO">
-                      <div class="frame_cardContainer__2VeS7" style="
-                            color: rgb(28, 34, 48);
-                            background-color: rgb(18, 32, 56);
-                            -webkit-box-shadow: 5px 5px 3px 0px #e14000;
-                            box-shadow: 5px 5px 3px 0px #e14000;
-                            border-radius: 30px;
-                          ">
-                        <div onclick="location.reload();" class="card-table_stakeSidebarHeader__MoTWw">
-                          <button class="card-table_stakeSidebarClose__2eeog">
-                            <img src="src/close-icon.9e736c38.svg" alt="close" />
-                          </button>
-                        </div>
-                        <div class="header_header__2gZ-9">
-                          <div class="header_headerButtonContainer__1tNb3"></div>
-                          <div class="header_headerTitleContainer__1Z1Xz">
-                            <div class="header_headerTokenContainer__3o6sy">
-                              <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" />
-                            </div>
-                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">Staking
-                              Rules</span>
-                          </div>
-                        </div>
-                        <div class="header_divider__-rd6t"></div>
-                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
 
-                          <p>
-                            SNAP Token Address:
-                            <b style="word-wrap: break-word">0x57cd5a91c18d21dedd72d3bcf255b60aef290f53</b><br /><br />
-
-                            Staking start date: 20/09/2021<br /><br />
-
-                            First Month APY: 16%<br /><br />
-
-                            First Month Period: 30 days<br /><br />
-
-                            Remaining months API: 8% <br /><br />
-
-                            Remaining months: 335 days<br /><br />
-
-                            Minimum Staking 4,000 SNAP<br /><br />
-
-                            Staking Lock Up period: 30 days<br /><br />
-
-                            SNAP Liquidity and Staking Program.<br /><br />
-                          </p>
-                          <a style="padding-top: 2vh; font-size: 1vh">*Earn the highest staking rewards during the first
-                            month.
-
-                            It is delighted to offer the highest-yield staking returns during the first months of the
-                            SnapStake function.
-
-                            Returns of up to 16% will be available during the first month</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-          <!-- Upcoming Projects ends -->
-          <style>
-            body {
-              font-family: 'Noto Sans' !important;
-            }
+          <!-- Upcoming Projects end -->
 
-            .tab-menu {
-              height: 50px;
-              cursor: pointer;
-              transition: 0.2s ease-in-out;
-              color: #787878;
-            }
-
-            .app_btn {
-              height: 60px;
-              font-weight: 500;
-              font-size: 1rem;
-              background: #4957cb !important;
-              border: 0;
-              outline: 0;
-            }
-
-            .app_btn:hover {
-              background: #4957cb !important;
-              border: 0;
-              outline: 0;
-            }
-
-            .gr {
-              color: #787878;
-              font-weight: 700;
-              margin: 0;
-              padding: 0;
-              font-size: 0.6rem;
-            }
-
-            .rw>*{
-              width: auto !important;
-            }
-
-            @media(max-width: 780px) {
-              .c2 {
-                width: auto !important;
-                height: auto !important;
-                position: relative !important;
-              }
-
-              .rw {
-                margin-right: auto;
-                margin-left: auto;
-                align-items: center;
-              }
-
-              .rw>* {
-                width: auto !important;
-              }
-            }
-
-            .tim1 {
-              font-weight: 700;
-              padding: 0;
-              margin: 0;
-            }
-
-            .act {
-              color: rgb(226, 226, 226);
-              border-bottom: 3px solid white;
-            }
-
-            .tab-menu:hover {
-              color: rgb(226, 226, 226);
-            }
-
-            .c2 {
-              background: #1b202c !important;
-            }
-
-            tr {
-              border: 2px solid #1b202c !important;
-              height: 50px;
-            }
-
-            td {
-              text-align: left;
-              padding: 1rem;
-            }
-
-            .tab-1 {
-              font-size: 0.9rem;
-              font-weight: 600;
-              color: #717988;
-            }
-
-            .table>:not(caption)>*>* {
-              padding: 20px !important;
-            }
-
-            .tab-2 {
-              font-size: 0.9rem;
-              font-weight: 600;
-              color: white;
-            }
-          </style>
           <!-- 1st Project -->
-          <div id="1_project" style="margin-top: 50px;" class="con MuiGrid-root MuiGrid-container">
+          <div id="1_project" style="margin-top: 50px; display: none;" class="con MuiGrid-root MuiGrid-container">
             <div class="
                   MuiGrid-root
                   MuiGrid-item
@@ -1195,9 +858,7 @@
                     ">
                   <div class="row" style="width: 100% !important;">
                     <div class="col-md-1">
-                      <img style="border-radius: 50%; width: 80px;"
-                        src="https://storage.googleapis.com/polkastarter-storage-production/4iai6hp38xz7vhod6s6our23hdee?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=V7KqBOA3fKweAm4p6y0weLj%2BFKOrBkthPM7o0VS0OGJKLtxBNwVMXDCvFcwDMA3z3dmMFHs56gE8pnX0Ip771NPsJW9SfNj4iWlZxUB9mHUeXe1sIs%2FtOu6kjo6tLIU9VwoP%2Fvr9ICUVN9Dbc%2BV6Um3ynosWvYYZ5X%2BsktwUDgJKbD3DHkQsGJv%2BPBeM5vnsTq7UZotGpoq34cW6qLcqaEuNM8fQNy8LcYtJBY00WCkyZpKHY6CxtNtZOIPPwWoTo4bkVAfo0tlIWR2%2BdM3W8Rt3NiQQVHeq%2BaR7BToaDaQ%2B4M9b%2FIGULlOqT024Ktl6uBzYZHzGg7CyizZnjkjV4g%3D%3D&response-content-disposition=inline%3B+filename%3D%22pfp-gfc-yellow-bg.png%22%3B+filename%2A%3DUTF-8%27%27pfp-gfc-yellow-bg.png&response-content-type=image%2Fpng"
-                        alt="">
+                      <img style="border-radius: 50%; width: 80px;" src="pfp-gfc-yellow-bg.png" alt="">
                     </div>
                     <div class="col-md-11 mr-auto text-left" style="line-height: 3rem;">
                       <a style="
@@ -1241,9 +902,245 @@
                       </div>
                       <hr style="margin: 0 !important; padding: 0 !important; color: white;">
 
+
                       <!-- Description -->
-                      <div class="details desc-1">
-                        <h1>desc hari</h1>
+                      <div class="details desc-1" style="color: #a1abb9; letter-spacing: 0.05rem;">
+                        <br>
+                        <div class="highlights mb">
+                          <h4 class="heads">HIGHLIGHTS</h4>
+                          <ul>
+                            <li>The Galaxy Fight Club is a real-time PvP game bringing together different NFT
+                              collections
+                              on one single platform.</li>
+                            <li>On Galaxy Fight Club, users 'login' and battle each other with their NFT characters</li>
+                          </ul>
+                        </div>
+
+                        <div class="product mb">
+                          <h4 class="heads">PRODUCT</h4>
+                          <h1 class="big-heading">
+                            The first cross-IP PvP game for the NFT Universe
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            Galaxy Fight Club (GFC) is the first cross-IP, cross-platform (PC & Mobile) PvP fighting
+                            game,
+                            where holders of different NFT collections can battle with each other to both win and earn
+                            rewards through play-to-earn mechanics. It has a fast-paced MOBA gameplay that is
+                            mobile-native and similar to Brawl Stars. Each 3v3 match is around 5 minutes long and the
+                            team
+                            that gets 20 kills first wins the match.
+                          </h6>
+                          <br>
+                          <div class="videoWrapper">
+                            <iframe src="https://www.youtube.com/embed/rzZIvkAHnJg" allowfullscreen></iframe>
+                          </div>
+                          <style>
+                            .videoWrapper {
+                              position: relative;
+                              padding-bottom: 56.25%;
+                              /* 16:9 */
+                              padding-top: 25px;
+                              height: 0;
+                            }
+
+                            .videoWrapper iframe {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                            }
+                          </style>
+                          <!-- <div class="embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/rzZIvkAHnJg" title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe>
+                          </div> -->
+                        </div>
+
+                        <div class="problem mb">
+                          <h4 class="heads">PROBLEM</h4>
+                          <h1 class="big-heading">
+                            Siloed NFT collections and lack of Cross-IP elements
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            IP interoperability is a key attribute to a functional Metaverse & NFTs are designed to be
+                            composable Lego bricks for others to build upon. For example, the most popular NFT projects
+                            today such as BAYC, Loot adventure gear or more recently Cryptoadz, all have one
+                            commonality, which is that they all positioned themselves as a Lego brick to be built upon.
+                            BAYC was the first project to give their holders full commercial rights, which allowed a
+                            second layer of derivative work to flourish; Loot was the first project at the time to
+                            launch just a list of text/words and invite others to give it meaning and interpretation.
+                            More recently, Cryptoadz was one of the first projects to give its users public domain
+                            licenses to their NFTs. In short, NFTs are designed in a way for other creators and builders
+                            to build something on top of them.
+                            <br>
+                            When it comes to games like Super Smash Bros, the reason that they are so fun is that
+                            characters from different IPs are coming together and players can for example pick Pikachu
+                            to fight Mario. It's this cross-IP element that makes these games enjoyable to play over the
+                            years. Yet the current NFT landscape is still very siloed. Making use of the
+                            interoperability of digital items/assets in a meaningful way is key to creating a
+                            long-lasting functioning NFT ecosystem.
+                          </h6>
+                        </div>
+
+                        <div class="solution mb">
+                          <h4 class="heads">SOLUTION</h4>
+                          <h1 class="big-heading">
+                            Providing utility for NFT collections
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            NFT holders are looking for a way to ‘use’ their NFTs. Galaxy Fight Club will fill this gap
+                            by being the first cross-IP PvP game platform in the NFT Universe.
+                          </h6>
+                          <br>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1638227998/projects/galaxy-fight-club/gfc-earning-system.png"
+                              alt="">
+                          </div>
+                        </div>
+
+                        <div class="business_model mb">
+                          <h4 class="heads">BUSINESS MODEL</h4>
+                          <h1 class="big-heading">
+                            Sustainable revenue through royalties and NFT drops
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            GFC will generate revenue through two channels. The first is by taking a 5% royalty from all
+                            secondary trades in a similar fashion to the Axie Infinity model. The second channel is
+                            through NFT drops. Together these two revenue channels will be enough for GFC to be
+                            self-sustaining in the medium to long term. The initial capital raised from the strategic
+                            sale and the IDO will help GFC accelerate development and user acquisition through paid
+                            advertising. GFC plans to hire more game artists, coders and developers as well as onboard a
+                            CMO and COO. The current war chest allows for a runway of around 36 months.
+                          </h6>
+                          <br>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1638227852/projects/galaxy-fight-club/gfc-business-model.png"
+                              alt="">
+                          </div>
+                        </div>
+
+                        <div class="market mb">
+                          <h4 class="heads">MARKET</h4>
+                          <h1 class="big-heading">
+                            Building the metaverse from the bottom-up
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            There are a few projects that could be considered as competitors to GFC, although GFC is
+                            unique in the way that it will be the only game that allows users to log in with their own
+                            NFT assets and that is optimized for an exciting battle experience. The three main
+                            competitors are Brawl Stars, Thetan Arena and THE SANDBOX. Brawl Stars is not NFT-based and
+                            offers no P2E mechanics, which are foundational to building out a functional Metaverse.
+                            Thetan arena is a game that is built top-down, while GFC builds a Metaverse from the
+                            bottom-up to allow players to use their own NFTs, to which their social identity is linked
+                            to. This is why GFC starts from the existing NFT communities and builds a game for these
+                            communities instead of building a game first and then releasing NFTs in hope of people
+                            buying them. The core attraction to NFTs is the social status and identity it gives them. A
+                            successful Metaverse must allow players to keep these intangibles. The Sandbox game is quite
+                            different to GFC's game genre, as it creates a Metaverse that is optimized for building and
+                            relaxing and is thus fundamentally not designed and optimized for PvP excitement.
+                            <br><br>
+                            By establishing partnerships with tier-1 NFT projects like CyberKongz, Illuvium, Animetas
+                            and many others, Galaxy Fight Club is taking advantage of network effects and is the go-to
+                            platform for cross-IP battles. GFC is developing a first-of-its-kind cross-chain token
+                            contract, which allows the game to run on an L2 for speed and lower transaction fees while
+                            optimizing trade volume on NFTs by keeping them on the Ethereum mainnet.
+                          </h6>
+                        </div>
+
+                        <div class="investors mb">
+                          <h4 class="heads">investors</h4>
+                          <h1 class="big-heading">
+                            Coming soon
+                          </h1>
+                        </div>
+
+                        <div class="team mb">
+                          <h4 class="heads">TEAM</h4>
+                          <h1 class="big-heading">
+                            Experienced team with extensive background in the gaming industry
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            The team has a background in the mobile gaming and NFT industry. They have a keen eye to
+                            discover opportunities for disruption and skilfully navigate the competitive landscape.
+                            <br><br>
+                            <ul>
+                              <li>
+                                Ado: CEO with 4+ years of experience in strategy consulting and the mobile games
+                                industry. Advised Fortune 500 companies as an ex-MBBD consultant before starting Galaxy
+                                Fight Club.
+                              </li><br>
+                              <li>
+                                Dan: Lead Game Designer with 5+ years of experience at OneSoft and VNG. Dan worked as
+                                the lead game designer previously on Samurai Shodown and was also part of the team that
+                                created Metal Wings, GunPow 3D, AU Mobi and other mobile titles.
+                              </li><br>
+                              <li>
+                                Dave: CTO with 2+ years of experience in Blockchain tech and smart contract development.
+                                His Solidity coding expertise enables cool things like cross-chain contracts and
+                                on-chain provably-fair loot boxes.
+                              </li>
+                            </ul>
+                          </h6>
+                        </div>
+
+                        <div class="token_utility mb">
+                          <h4 class="heads">TOKEN UTILITY</h4>
+                          <h1 class="big-heading">
+                            $GCOIN: The in-game, deflationary token underpinning the game economy
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            $GCOIN is designed to be the in-game currency that underpins the entire game economy and
+                            game loop. The token is designed to be deflationary even if no trading would occur on the
+                            market. This is because there is a fixed supply of 150M $GCOIN, while the demand is driven
+                            by in-game utilities, which will increase as the userbase of the game increases.
+                          </h6>
+                          <br>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1638227942/projects/galaxy-fight-club/gfc-token-utility.png"
+                              alt="">
+                          </div>
+                        </div>
+
+                        <div class="about_galaxy mb">
+                          <div class="row">
+                            <div class="col-md-4" style="margin-bottom: 40px;">
+                              <h4 class="heads" style="font-weight: 600; letter-spacing: 0rem;">
+                                Website
+                              </h4>
+                              <a href="https://galaxyfightclub.com/">galaxyfightclub.com</a>
+                            </div>
+                            <div class="col-md-4" style="margin-bottom: 40px;">
+                              <h4 class="heads" style="font-weight: 600; letter-spacing: 0rem;">
+                                Social Media
+                              </h4>
+                              <div class="row" style="display: flex;">
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-medium-m"></i>
+                                <i class="fab fa-telegram"></i>
+                                <i class="fab fa-discord"></i>
+
+                              </div>
+                            </div>
+                            <div class="col-md-4 text-right ml-auto" style="margin-bottom: 40px;">
+                              <img style="width: 50%; border-radius: 20px;" class="img-fluid"
+                                src="pfp-gfc-yellow-bg.png" alt="">
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                       <!-- Token Sale -->
                       <div class="details token-1" style="display: none;">
@@ -1368,82 +1265,483 @@
                   </div>
                   <br>
                 </div>
-                <script>
-                  $(document).ready(() => {
-                    if ($(window).width() < 780) {
-                      $('.ord1').addClass('order-1');
-                      $('.ord2').addClass('order-2');
-                      $('.dots').hide();
-                    }
-                  });
-                </script>
-                <div class="card-table_container__3wkRX rules" style="display: none">
-                  <div class="
-                        card-table_stakeSidebarContainer__2KEp0
-                        card-table_active__3JoHq
-                      " style="width: 100% !important">
-                    <div class="card-table_stakeSidebar__1kGgO">
-                      <div class="frame_cardContainer__2VeS7" style="
-                            color: rgb(28, 34, 48);
-                            background-color: rgb(18, 32, 56);
-                            -webkit-box-shadow: 5px 5px 3px 0px #e14000;
-                            box-shadow: 5px 5px 3px 0px #e14000;
-                            border-radius: 30px;
-                          ">
-                        <div onclick="location.reload();" class="card-table_stakeSidebarHeader__MoTWw">
-                          <button class="card-table_stakeSidebarClose__2eeog">
-                            <img src="src/close-icon.9e736c38.svg" alt="close" />
-                          </button>
+              </div>
+            </div>
+          </div>
+          <!-- 1st Project end -->
+
+          <!--2nd Project-->
+          <div id="2_project" style="margin-top: 50px; display: none;" class="con MuiGrid-root MuiGrid-container">
+            <div class="
+                  MuiGrid-root
+                  MuiGrid-item
+                  MuiGrid-grid-xs-12
+                  MuiGrid-grid-md-12
+                  MuiGrid-grid-xl-12
+                ">
+              <div class="
+                    MuiPaper-root
+                    MuiCard-root
+                    MuiPaper-elevation0 MuiPaper-rounded
+                  " style="
+                    min-height: 700px;
+                    border-radius: 20px;
+                    background-color: #1d222f;
+                    overflow: initial;
+                  ">
+                <div class="card-header_wrap__1iafr" style="
+                    
+                      padding-top: 1vh;
+                      padding-bottom: 1vh;
+                    ">
+                  <div class="row" style="width: 100% !important;">
+                    <div class="col-md-1">
+                      <img style="border-radius: 50%; width: 80px;"
+                        src="https://storage.googleapis.com/polkastarter-storage-production/h1gduva5arcsz2fcnk1uqlv6sn7a?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642325111&Signature=Rr1iKIPL6a9GPwRNHCLLNLZ6GVtXhwc%2B70r4JYqt510hDR0bdZlOBKnii7q4nhlsKT%2FxIUjPpqUi%2BXYDDjGZ91sgFxDVImgaV2QW1ODkJVaiAVrO6m%2BtwDuYw%2FxxR1FJLp4W8NilojZrrA8v52vxU%2Fpvxg248AlSf8umBkKOAN1CZVxgHNJ32kbm5av2r9wwp6aSbDw%2FDmtapCj5niO68Pkz9bvZN0IDSeB0PacHJFhX10HNodxbcg4tlNqQv0Z3EmOtAgpOgED1RjzwEdO%2BPrA4QkpMwXITxWroyqabh%2F%2FDia99FHAX09e1A5RKpR2C5WY%2BQatDsU6kElfi%2BBuPOg%3D%3D&response-content-disposition=inline%3B+filename%3D%22SynCity_400x400.png%22%3B+filename%2A%3DUTF-8%27%27SynCity_400x400.png&response-content-type=image%2Fpng"
+                        alt="">
+                    </div>
+                    <div class="col-md-11 mr-auto text-left" style="line-height: 3rem;">
+                      <a style="
+                          font-size: 3rem;
+                          font: bold;
+                          font-weight: 700;
+                          color: rgb(255, 255, 255);
+                          
+                        ">SYN Club</a>
+                      <h6 style="font-weight: 500; color: #a1abb9;">The Mafia Metaverse
+                      </h6>
+                    </div>
+                  </div>
+
+                  <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255)"></div>
+                </div>
+                <div></div>
+                <br>
+                <div class="card-table_container__3wkRX">
+                  <div class="row">
+                    <div class="mx-auto col-md-8 ord2">
+                      <img class="card-img-top"
+                        src="https://storage.googleapis.com/polkastarter-storage-production/mwha24s0edprkncu72msgh0r5zk5?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642325111&Signature=ICrYNbTc8yoI6%2Fdbo%2Be4bkk6JUqPS7c2yrmaU5X3Sp078usYDP5mqSbJ3c9yVj4FcYNndIH8CzM%2BS1jXIVTKqtrQNO%2BkrWLHBwquod%2FsSPPbLSHTvJqm6y3LgPypdw8J4Y2eG1UUfCr%2F%2FYEusD%2BZRZFf%2BJUzvpcYevbCsMJYXYJvNrq1QW6vHFRs1XW4FJz1ZdMAlRfg4rUMi9ITB%2Fc4YQO5rqSsETBNyxrQ1DcyfWkyfWnmVHHr2dVJAOHOegNhJIbEZDEKDaq%2FeKIfBOq%2BbyrQjqHfujSYC%2FvrII77YJDcaVh4oKPRYTLDYAc53wri5Ja0%2B%2FusO3ohy0Vpi2UD2g%3D%3D&response-content-disposition=inline%3B+filename%3D%22CoverImage.jpeg%22%3B+filename%2A%3DUTF-8%27%27CoverImage.jpeg&response-content-type=image%2Fjpeg"
+                        alt="Card image cap">
+                      <br><br><br>
+                      <div class="row">
+                        <div style="width: 110px;">
+
+                          <div id="desc-tab-menu-1" onclick="change_to_me(this, 'description', '1');"
+                            class="tab-menu act">
+                            <h6>Description</h6>
+                          </div>
+
                         </div>
-                        <div class="header_header__2gZ-9">
-                          <div class="header_headerButtonContainer__1tNb3"></div>
-                          <div class="header_headerTitleContainer__1Z1Xz">
-                            <div class="header_headerTokenContainer__3o6sy">
-                              <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" />
-                            </div>
-                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">Staking
-                              Rules</span>
+                        <div style="width: 105px;">
+                          <div onclick="change_to_me(this, 'token', '1');" class="tab-menu">
+                            <h6>Token Sale</h6>
+                          </div>
+
+                        </div>
+                      </div>
+                      <hr style="margin: 0 !important; padding: 0 !important; color: white;">
+
+
+                      <!-- Description -->
+                      <div class="details desc-1" style="color: #a1abb9; letter-spacing: 0.05rem;">
+                        <br>
+                        <div class="highlights mb">
+                          <h4 class="heads">HIGHLIGHTS</h4>
+                          <ul>
+                            <li>SYN CITY is the first-ever Mafia Metaverse. Here you fight, loot, build and govern
+                              through your own syndicate.</li>
+                            <li>$SYN is the governance token for the metaverse and core of the Mafia-as-a-DAO system.
+                              Users stake $SYN to generate votes to delegate to any syndicate leaders. A limited number
+                              of the highest voted leaders will be on the High Table to govern the earning pools of the
+                              metaverse.</li>
+                            <li>$8 million invested by Angels such as Justin Kan (Co-founder of Twitch), Do Kwon
+                              (Co-founder of Terra), Kieran Warwick (Co-founder of Illuvium), Santiago R Santos
+                              (Ex-Partner of Parafi Capital), leading VCs including Animoca Brands, Spartan Group and
+                              HOF and strategic partners including Overwolf, Merit Circle, YGG, GuildFi and many more.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="product mb">
+                          <h4 class="heads">PRODUCT</h4>
+                          <h1 class="big-heading">
+                            Be the boss and take control of turfs, business, loot, and raid other syndicates to expand
+                            your empire.
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            SYN CITY is the first-ever Mafia Metaverse. Here you fight, loot, build and lead. Here you
+                            join a syndicate and run businesses, tax your underlings and pay tribute to your bosses
+                            through blockchain-backed assets. With enough Ambition, Power, and Swagger you can sit at
+                            the head of a syndicate and help chart the course of the Mafia Metaverse.
+                            <br><br>
+                            Displaying a stylized take on the degen and underworld, SYN CITY takes this concept a step
+                            further by making the game free to play where you can play and earn. Strategize to build a
+                            ruthless empire backed by a gritty syndicate of peers, friends, and enemies alike. The Mafia
+                            will allow #synners to grind their way up through daily missions, events, battles, trades,
+                            farms, and much more.
+
+                          </h6>
+                          <br>
+                          <div class="videoWrapper">
+                            <iframe src="https://www.youtube.com/embed/eDWg_C4v3rQ" allowfullscreen></iframe>
+                          </div>
+                          <style>
+                            .videoWrapper {
+                              position: relative;
+                              padding-bottom: 56.25%;
+                              /* 16:9 */
+                              padding-top: 25px;
+                              height: 0;
+                            }
+
+                            .videoWrapper iframe {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                            }
+                          </style>
+                          <!-- <div class="embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/rzZIvkAHnJg" title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe>
+                          </div> -->
+                        </div>
+
+                        <div class="problem mb">
+                          <h4 class="heads">PROBLEM</h4>
+                          <h1 class="big-heading">
+                            The barriers to entry into the PLAY & EARN model are high and there is limited incentives
+                            for the players involved
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            Most blockchain game economy designs are not working. For starters, it’s not fair to ask
+                            users to pay over $1000 before they can even enter and play the game. The result of this is
+                            that users tend to earn back their initial cost, they withdraw and sell the assets
+                            immediately to recover from the initial investments. This is a death spiral.
+                          </h6>
+                        </div>
+
+                        <div class="solution mb">
+                          <h4 class="heads">SOLUTION</h4>
+                          <h1 class="big-heading">
+                            Everyone can be a part of and thrive within the metaverse by bringing the FREE TO PLAY into
+                            PLAY TO EARN
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            SYN CITY is building a mafia metaverse with the following features:
+                            <ul>
+                              <li>Free to play and earn: anyone can come and engage, no ownership of NFT needed</li>
+
+                              <li>Multiple revenue streams: users would have multiple revenue streams by engaging from
+                                grinding through events, re-allocating assets to generate returns, and lead your
+                                syndicate
+                                to earn like a mob through the MaaD system.</li>
+
+                              <li>Focus on the mafia vertical, making it easy for people to click and engage and easy to
+                                form a consensus.</li>
+                            </ul>
+                          </h6>
+                          <br>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1640448544/projects/syn-city/NFT_DROP_Logo_960_x_540_px_960_x_540_px_q3yr38.gif"
+                              alt="">
                           </div>
                         </div>
-                        <div class="header_divider__-rd6t"></div>
-                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
 
-                          <p>
-                            SNAP Token Address:
-                            <b style="word-wrap: break-word">0x57cd5a91c18d21dedd72d3bcf255b60aef290f53</b><br /><br />
+                        <div class="business_model mb">
+                          <h4 class="heads">BUSINESS MODEL</h4>
+                          <h1 class="big-heading">
+                            Be the leader you have always wanted to be by creating, taking charge, and leading a group
+                            of degenerate syndicate members. Raid loot, layout strategies, expand your crews, and
+                            collect tax.
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            The Mafia-as-a-DAO (MaaD) consists of leaders on the High Table that manage the governance
+                            committee. Users are incentivized and SYN CITY revenue is generated by the MaaD system.
 
-                            Staking start date: 20/09/2021<br /><br />
+                            <ul>
+                              <li>Players stake $SYN to generate $sPOWER and delegate that to the syndicate leaders.
+                                There are unlimited syndicates with unlimited leaders, but only top 7 leaders with the
+                                most $sPOWER will be allowed to join the High Table to manage the governance committee
+                                which shapes the earnings events and allocate the earnings pool.</li>
 
-                            First Month APY: 16%<br /><br />
+                              <li>Syndicate leaders could offer benefits in assets, special events, and many others to
+                                the members of their syndicates for recruitment, engagement and loyalty.</li>
 
-                            First Month Period: 30 days<br /><br />
+                              <li>Syndicate leaders can tax their members for the benefits offered. The SYN CITY then
+                                platform charges a tax to the syndicates, out of which a portion goes to the overall
+                                community as Universal Basic Income (UBI), rest goes to the developers.</li>
+                            </ul>
+                          </h6>
+                          <br>
+                          <img class="img-fluid"
+                            src="https://res.cloudinary.com/polkastarter/image/upload/v1640448781/projects/syn-city/image4_q5yk0c.png"
+                            alt="">
+                        </div>
 
-                            Remaining months API: 8% <br /><br />
+                        <div class="market mb">
+                          <h4 class="heads">MARKET</h4>
+                          <h1 class="big-heading">
+                            This is the crypto era and everyone should have an equal right to be able to play and earn.
+                            In the Mafia Metaverse, it should be FREE TO EARN.
 
-                            Remaining months: 335 days<br /><br />
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            It’s not fair to ask people to pay $1000 hard-earned money before they can play or earn from
+                            the game. The Free to PLAY to EARN model ensures there is a global market base with a large
+                            funnel. And by building for both mobile and desktop, SYN CITY is ready for mass adoption.
+                          </h6>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1640448780/projects/syn-city/image2_h6ak7j.png"
+                              alt="">
+                          </div>
 
-                            Minimum Staking 4,000 SNAP<br /><br />
+                        </div>
 
-                            Staking Lock Up period: 30 days<br /><br />
+                        <div class="investors mb">
+                          <h4 class="heads">investors</h4>
+                          <h1 class="big-heading">
+                            Mafia and underworld syndicates is one of the few evergreen genres among all the
+                            entertainment products worldwide. SYN CITY is boosted by web2 and web3 pioneers
 
-                            SNAP Liquidity and Staking Program.<br /><br />
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            $8 Million Invested by Justin Kan (Co-founder of Twitch), Do Kwon (Co-founder of Terra),
+                            Alex Pack (Co-founder of DragonFly), Luke Wagman (Co-founder of Coinmarketcap), Jordan
+                            Momtazi (Co-founder of Synthetix), Kieran Warwick (Co-founder of Illuvium), Elliot Wainman
+                            (Co-founder of ElliotTrade & Superfarm), Alex Becker (Co-founder of Neo Tokyo Identity),
+                            Santa-iago R Santos (Ex-Partner of Parafi Capital), Paul Menchov (Co-founder of Coinlist and
+                            Republic), also leading VC including Animoca Brands, Spartan Group, HOF, iAngels, A&T
+                            Capital and strategic partners including Overwolf, Merit Circle, YGG, GuildFi and many more.
+                          </h6>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1640448537/projects/syn-city/existing_investors_ghvafi.png"
+                              alt="">
+                          </div>
+
+                        </div>
+
+                        <div class="team mb">
+                          <h4 class="heads">TEAM</h4>
+                          <h1 class="big-heading">
+                            SYN CITY is developed by a team of industry experts from Disney, Ubisoft, Roblox, EA,
+                            Gameloft, Google, Yahoo and Twitter.
+
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+
+                            <ul>
+                              <li>
+                                <span style="font-weight: 800;">Roy Liu (Co-founder):</span> Former head of business and
+                                marketing of TRON for the last 4 years. Early member of PopCap Game back in 2006,
+                                focused on the product of several award-winning game titles like Plants VS Zombies,
+                                Bejeweled, etc. PopCap later sold to EA for $1.3B in 2011. In 2012, joined Chartboost,
+                                the biggest mobile game advertising platform at the time. Chartboost later sold to Zynga
+                                for $250M.
+                              </li><br>
+                              <li>
+                                <span style="font-weight: 800;">Mihai Pohontu (Co-founder):</span> Former VP at Samsung
+                                Electronics America. Founder and General Manager of EA Romania, one of the largest game
+                                studios in Eastern Europe. Previously overseeing the operational functions of Disney's
+                                interactive entertainment portfolio and managing Electronic Arts' multi-disciplinary
+                                development services organization.
+                              </li>
+                            </ul>
+                          </h6>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <img class="img-fluid"
+                              src="https://res.cloudinary.com/polkastarter/image/upload/v1640448780/projects/syn-city/image1_gpjydw.png"
+                              alt="">
+                          </div>
+
+                        </div>
+
+                        <div class="token_utility mb">
+                          <h4 class="heads">TOKEN UTILITY</h4>
+                          <h1 class="big-heading">
+                            $SYN is the governance token for the metaverse and core of the Mafia-as-a-DAO system.
+
+                          </h1>
+                          <br>
+                          <h6 style="line-height: 1.4rem; letter-spacing: 0.1rem; text-align: justify;">
+                            <ul>
+                              <li>Stake $SYN to generate $sPOWER and delegate that to the syndicate leader.
+
+                              </li>
+                              <li>Stake $SYN to earn additional yield.
+
+                              </li>
+                              <li>$SYN is also utilized by staking to earn $sSYN (synthetic SYN) which is used to
+                                purchase in-game assets on the marketplace with discount.
+
+                              </li>
+                            </ul>
+                          </h6>
+                          <br>
+                          <img class="img-fluid"
+                            src="https://res.cloudinary.com/polkastarter/image/upload/v1640448780/projects/syn-city/image5_zzbmmy.png"
+                            alt="">
+                        </div>
+
+                        <div class="about_galaxy mb">
+                          <div class="row">
+                            <div class="col-md-4" style="margin-bottom: 40px;">
+                              <h4 class="heads" style="font-weight: 600; letter-spacing: 0rem;">
+                                Website
+                              </h4>
+                              <a href="https://syn.city/">syn.city</a>
+                            </div>
+                            <div class="col-md-4" style="margin-bottom: 40px;">
+                              <h4 class="heads" style="font-weight: 600; letter-spacing: 0rem;">
+                                Social Media
+                              </h4>
+                              <div class="row" style="display: flex;">
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-medium-m"></i>
+                                <i class="fab fa-telegram"></i>
+                                <i class="fab fa-discord"></i>
+
+                              </div>
+                            </div>
+                            <div class="col-md-4 text-right ml-auto" style="margin-bottom: 40px;">
+                              <img style="width: 50%; border-radius: 20px;" class="img-fluid"
+                                src="https://storage.googleapis.com/polkastarter-storage-production/h1gduva5arcsz2fcnk1uqlv6sn7a?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642325111&Signature=Rr1iKIPL6a9GPwRNHCLLNLZ6GVtXhwc%2B70r4JYqt510hDR0bdZlOBKnii7q4nhlsKT%2FxIUjPpqUi%2BXYDDjGZ91sgFxDVImgaV2QW1ODkJVaiAVrO6m%2BtwDuYw%2FxxR1FJLp4W8NilojZrrA8v52vxU%2Fpvxg248AlSf8umBkKOAN1CZVxgHNJ32kbm5av2r9wwp6aSbDw%2FDmtapCj5niO68Pkz9bvZN0IDSeB0PacHJFhX10HNodxbcg4tlNqQv0Z3EmOtAgpOgED1RjzwEdO%2BPrA4QkpMwXITxWroyqabh%2F%2FDia99FHAX09e1A5RKpR2C5WY%2BQatDsU6kElfi%2BBuPOg%3D%3D&response-content-disposition=inline%3B+filename%3D%22SynCity_400x400.png%22%3B+filename%2A%3DUTF-8%27%27SynCity_400x400.png&response-content-type=image%2Fpng"
+                                alt="">
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <!-- Token Sale -->
+                      <div class="details token-1" style="display: none;">
+                        <br><br>
+                        <table class="table" style="background: #0f1217; color: ;">
+                          <thead>
+                            <tr>
+                              <th style="color:#787878;">Project Key Metrics</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tab-1">Sale Price</td>
+                              <td class="tab-2">1 SYN = $0.02</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Sale Start Time (UTC)</td>
+                              <td class="tab-2">January 7th 2022, 4:00 PM UTC</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Sale End Time (UTC)</td>
+                              <td class="tab-2">TBA</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Token Distribution (UTC)</td>
+                              <td class="tab-2">TBA</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Initial Market Cap</td>
+                              <td class="tab-2">TBA</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Initial Token Circulation</td>
+                              <td class="tab-2">TBA</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <script>
+                        function change_to_me(e, type, number) {
+                          $('.tab-menu').removeClass('act');
+                          $(e).addClass('act');
+                          $('.details').hide();
+
+                          if (type == 'description') {
+                            $('.desc-' + number).fadeIn();
+                          } else {
+                            $('.token-' + number).fadeIn();
+                          }
+                        }
+                      </script>
+
+                    </div>
+
+                    <!-- Second Part -->
+                    <div class="mx-auto col-md-4 ord1">
+                      <div class="card c2" style="color: white; position: fixed;">
+                        <div class="card-body">
+                          <h6 style="color: grey;">Fundraise Goal</h6>
+                          <h2 style="font-weight:700;" class="card-title">$500,000</h2>
+
+                          <br>
+                          <p style="color: #787878; font-weight: 500 !important;" class="card-text">The whitelist for
+                            SYN CITY is now available and you can apply for it below.
+                            <br>
+                            Note that you need to have at least 250 POLS Power to qualify for this whitelist.
                           </p>
-                          <a style="padding-top: 2vh; font-size: 1vh">*Earn the highest staking rewards during the first
-                            month.
-
-                            It is delighted to offer the highest-yield staking returns during the first months of the
-                            SnapStake function.
-
-                            Returns of up to 16% will be available during the first month</a>
+                          <br>
+                          <button style="width: 100%;" class="btn btn-primary app_btn">Apply Now</button>
+                          <br>
+                          <button style="width: 100%;" class="btn btn-primary app_btn dash">Go to Dashboard</button>
+                          <br>
+                          <br>
+                          <div class="mx-auto text-center timer"
+                            style="background: #252b37; padding: 10px; border-radius: 10px; margin-bottom: 5px;">
+                            <h6 style="color:#787878; letter-spacing: 0.3rem;">SALE STARTS IN</h6>
+                            <br>
+                            <div class="row rw mx-auto text-center" style="display: flex;">
+                              <div class="col-md-2">
+                                <h4 class="tim1">04</h4>
+                                <span class="gr">Days</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">07</h4>
+                                <span class="gr">Hours</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">23</h4>
+                                <span class="gr" style="font-size: 1vh;">Minutes</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">09</h4>
+                                <span class="gr" style="font-size: 1vh;">Seconds</span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <br>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 1st Project ends -->
+          <!--2nd project ends-->
         </div>
       </div>
     </div>

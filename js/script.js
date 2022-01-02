@@ -1,5 +1,8 @@
 function change_tab(e, type) {
     $('.con').hide();
+    if ($(window).width() < 780) {
+        $('.navigation_wrapper__3gcGH').fadeOut();
+    }
     if (type == 'upcoming') {
         $('#upcoming_projects').fadeIn();
     } else if (type == 'home') {
@@ -16,5 +19,24 @@ function open_nav() {
         $('.navigation_wrapper__3gcGH').fadeOut();
     } else {
         $('.navigation_wrapper__3gcGH').fadeIn();
+    }
+}
+
+$(document).ready(() => {
+    if ($(window).width() < 780) {
+        $('.ord1').addClass('order-1');
+        $('.ord2').addClass('order-2');
+        $('.dots').hide();
+    }
+});
+
+function open_project(proj_num) {
+    $('.con').hide();
+    if (proj_num == '1') {
+        $('#1_project').fadeIn();
+    } else if (proj_num == '2') {
+        $('#2_project').fadeIn();
+    } else {
+        $('#3_project').fadeIn();
     }
 }
