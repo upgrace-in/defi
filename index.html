@@ -14,6 +14,8 @@
       background-size: cover;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link href="src/8.e94f92bb.chunk.css" rel="stylesheet" />
   <link href="src/main.4dbfb0a3.chunk.css" rel="stylesheet" />
@@ -264,39 +266,6 @@
             </span>
           </a>
 
-          <!-- <a class="nav-item_link__yU0Vp" target="_blank">
-              <span
-                class="nav-item_linkWrapper__1IVev"
-                role="button"
-                tabindex="0"
-              >
-                <div
-                  class="nav-item_spacer__3_Yzq"
-                  style="background-color: rgb(255, 255, 255)"
-                >
-                  <div
-                    class="nav-item_spacerInner__HJWlk"
-                    style="background-color: rgb(15, 20, 29)"
-                  ></div>
-                </div>
-                <div
-                  class="nav-item_linkBody__2ilRo"
-                  style="background-color: rgb(15, 20, 29)"
-                >
-                  <img height="30vh" src="src/home.png" alt="" />
-                  <span class="nav-item_text__1Kr9k">Swap</span>
-                </div>
-                <div
-                  class="nav-item_spacer__3_Yzq"
-                  style="background-color: rgb(255, 255, 255)"
-                >
-                  <div
-                    class="nav-item_spacerInner__HJWlk"
-                    style="background-color: rgb(15, 20, 29)"
-                  ></div>
-                </div>
-              </span>
-            </a> -->
 
           <a class="nav-item_link__yU0Vp" href="https://snapex.com" target="_blank">
             <span class="nav-item_linkWrapper__1IVev" role="button" tabindex="0">
@@ -370,7 +339,7 @@
           </div>
           <!-- Header ends -->
           <!-- Home -->
-          <div id="home" class="con MuiGrid-root MuiGrid-container">
+          <div id="home" style="display: none;" class="con MuiGrid-root MuiGrid-container">
             <div class="
                   MuiGrid-root
                   MuiGrid-item
@@ -779,7 +748,8 @@
           </div>
           <!-- Home end -->
           <!-- Upcoming Projects -->
-          <div id="upcoming_projects" style="margin-top: 50px; display: none;" class="con MuiGrid-root MuiGrid-container">
+          <div id="upcoming_projects" style="margin-top: 50px; display: none;"
+            class="con MuiGrid-root MuiGrid-container">
             <div class="
                   MuiGrid-root
                   MuiGrid-item
@@ -812,7 +782,7 @@
                         ">Upcoming Projects</a>
                   </div>
                   <style>
-                    .hide{
+                    .hide {
                       display: none;
                     }
 
@@ -822,7 +792,7 @@
                       font-weight: 600;
                     }
 
-                    .card-img-top > img{
+                    .card-img-top>img {
                       max-width: 100%;
                       height: auto;
                       display: block;
@@ -849,9 +819,10 @@
                       font-size: 0.7rem !important;
                     }
 
-                    .card-img-top{
+                    .card-img-top {
                       border-radius: 6px;
                     }
+
 
                     .card {
                       height: 27rem;
@@ -862,8 +833,8 @@
                       border: none;
                     }
 
-                    @media(max-width: 780px){
-                      .card{
+                    @media(max-width: 780px) {
+                      .card {
                         height: 25rem;
                       }
                     }
@@ -1096,6 +1067,383 @@
             </div>
           </div>
           <!-- Upcoming Projects ends -->
+          <style>
+            body {
+              font-family: 'Noto Sans' !important;
+            }
+
+            .tab-menu {
+              height: 50px;
+              cursor: pointer;
+              transition: 0.2s ease-in-out;
+              color: #787878;
+            }
+
+            .app_btn {
+              height: 60px;
+              font-weight: 500;
+              font-size: 1rem;
+              background: #4957cb !important;
+              border: 0;
+              outline: 0;
+            }
+
+            .app_btn:hover {
+              background: #4957cb !important;
+              border: 0;
+              outline: 0;
+            }
+
+            .gr {
+              color: #787878;
+              font-weight: 700;
+              margin: 0;
+              padding: 0;
+              font-size: 0.6rem;
+            }
+
+            .rw>*{
+              width: auto !important;
+            }
+
+            @media(max-width: 780px) {
+              .c2 {
+                width: auto !important;
+                height: auto !important;
+                position: relative !important;
+              }
+
+              .rw {
+                margin-right: auto;
+                margin-left: auto;
+                align-items: center;
+              }
+
+              .rw>* {
+                width: auto !important;
+              }
+            }
+
+            .tim1 {
+              font-weight: 700;
+              padding: 0;
+              margin: 0;
+            }
+
+            .act {
+              color: rgb(226, 226, 226);
+              border-bottom: 3px solid white;
+            }
+
+            .tab-menu:hover {
+              color: rgb(226, 226, 226);
+            }
+
+            .c2 {
+              background: #1b202c !important;
+            }
+
+            tr {
+              border: 2px solid #1b202c !important;
+              height: 50px;
+            }
+
+            td {
+              text-align: left;
+              padding: 1rem;
+            }
+
+            .tab-1 {
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: #717988;
+            }
+
+            .table>:not(caption)>*>* {
+              padding: 20px !important;
+            }
+
+            .tab-2 {
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: white;
+            }
+          </style>
+          <!-- 1st Project -->
+          <div id="1_project" style="margin-top: 50px;" class="con MuiGrid-root MuiGrid-container">
+            <div class="
+                  MuiGrid-root
+                  MuiGrid-item
+                  MuiGrid-grid-xs-12
+                  MuiGrid-grid-md-12
+                  MuiGrid-grid-xl-12
+                ">
+              <div class="
+                    MuiPaper-root
+                    MuiCard-root
+                    MuiPaper-elevation0 MuiPaper-rounded
+                  " style="
+                    min-height: 700px;
+                    border-radius: 20px;
+                    background-color: #1d222f;
+                    overflow: initial;
+                  ">
+                <div class="card-header_wrap__1iafr" style="
+                    
+                      padding-top: 1vh;
+                      padding-bottom: 1vh;
+                    ">
+                  <div class="row" style="width: 100% !important;">
+                    <div class="col-md-1">
+                      <img style="border-radius: 50%; width: 80px;"
+                        src="https://storage.googleapis.com/polkastarter-storage-production/4iai6hp38xz7vhod6s6our23hdee?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=V7KqBOA3fKweAm4p6y0weLj%2BFKOrBkthPM7o0VS0OGJKLtxBNwVMXDCvFcwDMA3z3dmMFHs56gE8pnX0Ip771NPsJW9SfNj4iWlZxUB9mHUeXe1sIs%2FtOu6kjo6tLIU9VwoP%2Fvr9ICUVN9Dbc%2BV6Um3ynosWvYYZ5X%2BsktwUDgJKbD3DHkQsGJv%2BPBeM5vnsTq7UZotGpoq34cW6qLcqaEuNM8fQNy8LcYtJBY00WCkyZpKHY6CxtNtZOIPPwWoTo4bkVAfo0tlIWR2%2BdM3W8Rt3NiQQVHeq%2BaR7BToaDaQ%2B4M9b%2FIGULlOqT024Ktl6uBzYZHzGg7CyizZnjkjV4g%3D%3D&response-content-disposition=inline%3B+filename%3D%22pfp-gfc-yellow-bg.png%22%3B+filename%2A%3DUTF-8%27%27pfp-gfc-yellow-bg.png&response-content-type=image%2Fpng"
+                        alt="">
+                    </div>
+                    <div class="col-md-11 mr-auto text-left" style="line-height: 3rem;">
+                      <a style="
+                          font-size: 3rem;
+                          font: bold;
+                          font-weight: 700;
+                          color: rgb(255, 255, 255);
+                          
+                        ">Galaxy Fight Club</a>
+                      <h6 style="font-weight: 500; color: #a1abb9;">The First Cross-IP PVP game for the NFT Universe
+                      </h6>
+                    </div>
+                  </div>
+
+                  <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255)"></div>
+                </div>
+                <div></div>
+                <br>
+                <div class="card-table_container__3wkRX">
+                  <div class="row">
+                    <div class="mx-auto col-md-8 ord2">
+                      <img class="card-img-top"
+                        src="https://storage.googleapis.com/polkastarter-storage-production/e5cge4bvz5nxqzfqfwzmy0z95w1p?GoogleAccessId=polkastarter%40numeric-trilogy-306416.iam.gserviceaccount.com&Expires=1642230796&Signature=btKAdM4BY9fEmFYw8WNIP2NTjADHK8KWjlfewN5JNodOF0ltkT%2BFRiDDmN%2F0QxoljfGH6Xb403of0MLrhvQ5j1Gfr1sAh%2BFOUxJkVcWEhr3ND7D6tQAmDNYeu0jjTmAGjFnyMoBjIz2JOg%2FzlDtgeIuZiQft4Hn0MkMNgWWM7y9qsWHLy0PMNg774L7tYzfFK2SkDzWE8WoMTI2Z7C%2BgsSKKSy3UbQ3EKFQS04ycMZlxFYA1YBGM%2BZu6fmasx3%2BnHEgkFR2Vsu3xWspzPL9bKLrNW2If5EA6PwZa7OSicQPzkHrXU8Xzl6FKh%2Bb49bACExWojPLatLDCtYnD%2BKPO7A%3D%3D&response-content-disposition=inline%3B+filename%3D%22photo_2021-12-22+16.30.16.jpeg%22%3B+filename%2A%3DUTF-8%27%27photo_2021-12-22%252016.30.16.jpeg&response-content-type=image%2Fjpeg"
+                        alt="Card image cap">
+                      <br><br><br>
+                      <div class="row">
+                        <div style="width: 110px;">
+
+                          <div id="desc-tab-menu-1" onclick="change_to_me(this, 'description', '1');"
+                            class="tab-menu act">
+                            <h6>Description</h6>
+                          </div>
+
+                        </div>
+                        <div style="width: 105px;">
+                          <div onclick="change_to_me(this, 'token', '1');" class="tab-menu">
+                            <h6>Token Sale</h6>
+                          </div>
+
+                        </div>
+                      </div>
+                      <hr style="margin: 0 !important; padding: 0 !important; color: white;">
+
+                      <!-- Description -->
+                      <div class="details desc-1">
+                        <h1>desc hari</h1>
+                      </div>
+                      <!-- Token Sale -->
+                      <div class="details token-1" style="display: none;">
+                        <br><br>
+                        <table class="table" style="background: #0f1217; color: ;">
+                          <thead>
+                            <tr>
+                              <th style="color:#787878;">Project Key Metrics</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tab-1">Sale Price</td>
+                              <td class="tab-2">1 GCOIN = $0.5</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Sale Start Time (UTC)</td>
+                              <td class="tab-2">January 6th 2022, 1:00 PM UTC</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Sale End Time (UTC)</td>
+                              <td class="tab-2">January 6th 2022, 3:00 PM UTC</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Token Distribution (UTC)</td>
+                              <td class="tab-2">January 6th 2022, 3:00 PM UTC</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Initial Market Cap</td>
+                              <td class="tab-2">$1,687,500</td>
+                            </tr>
+                            <tr>
+                              <td class="tab-1">Initial Token Circulation</td>
+                              <td class="tab-2">3,375,000</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <script>
+                        function change_to_me(e, type, number) {
+                          $('.tab-menu').removeClass('act');
+                          $(e).addClass('act');
+                          $('.details').hide();
+
+                          if (type == 'description') {
+                            $('.desc-' + number).fadeIn();
+                          } else {
+                            $('.token-' + number).fadeIn();
+                          }
+                        }
+                      </script>
+
+                    </div>
+
+                    <!-- Second Part -->
+                    <div class="mx-auto col-md-4 ord1">
+                      <div class="card c2" style="color: white; position: fixed;">
+                        <div class="card-body">
+                          <h6 style="color: grey;">Fundraise Goal</h6>
+                          <h2 style="font-weight:700;" class="card-title">$2,000,000</h2>
+
+                          <br>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <p style="color: #787878; font-weight: 500 !important;" class="card-text">Allocation</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$500 Max</p>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 5px;">
+                            <div class="col-md-8">
+                              <p style="color: #787878; font-weight: 500 !important;" class="card-text">Price per token
+                              </p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="card-text" style="text-align: right;">$0.5</p>
+                            </div>
+                          </div>
+                          <br>
+                          <button style="width: 100%;" class="btn btn-primary app_btn">Application Status</button>
+                          <br>
+                          <br>
+                          <br>
+                          <div class="mx-auto text-center timer"
+                            style="background: #252b37; padding: 10px; border-radius: 10px; margin-bottom: 5px;">
+                            <h6 style="color:#787878; letter-spacing: 0.3rem;">SALE STARTS IN</h6>
+                            <br>
+                            <div class="row rw mx-auto text-center" style="display: flex;">
+                              <div class="col-md-2">
+                                <h4 class="tim1">04</h4>
+                                <span class="gr">Days</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">07</h4>
+                                <span class="gr">Hours</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">23</h4>
+                                <span class="gr" style="font-size: 1vh;">Minutes</span>
+                              </div>
+                              <div class="dots col-md">
+                                <span style="color: grey; font-size: 0.8rem;">:</span>
+                              </div>
+                              <div class="col-md-2">
+                                <h4 class="tim1">09</h4>
+                                <span class="gr" style="font-size: 1vh;">Seconds</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+                <script>
+                  $(document).ready(() => {
+                    if ($(window).width() < 780) {
+                      $('.ord1').addClass('order-1');
+                      $('.ord2').addClass('order-2');
+                      $('.dots').hide();
+                    }
+                  });
+                </script>
+                <div class="card-table_container__3wkRX rules" style="display: none">
+                  <div class="
+                        card-table_stakeSidebarContainer__2KEp0
+                        card-table_active__3JoHq
+                      " style="width: 100% !important">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div class="frame_cardContainer__2VeS7" style="
+                            color: rgb(28, 34, 48);
+                            background-color: rgb(18, 32, 56);
+                            -webkit-box-shadow: 5px 5px 3px 0px #e14000;
+                            box-shadow: 5px 5px 3px 0px #e14000;
+                            border-radius: 30px;
+                          ">
+                        <div onclick="location.reload();" class="card-table_stakeSidebarHeader__MoTWw">
+                          <button class="card-table_stakeSidebarClose__2eeog">
+                            <img src="src/close-icon.9e736c38.svg" alt="close" />
+                          </button>
+                        </div>
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerButtonContainer__1tNb3"></div>
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy">
+                              <img class="header_headerToken__3iQN0" src="src/logo.png" alt="" />
+                            </div>
+                            <span class="header_headerTitle__3e5ae" style="color: rgb(255, 255, 255)">Staking
+                              Rules</span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(255, 255, 255)">
+
+                          <p>
+                            SNAP Token Address:
+                            <b style="word-wrap: break-word">0x57cd5a91c18d21dedd72d3bcf255b60aef290f53</b><br /><br />
+
+                            Staking start date: 20/09/2021<br /><br />
+
+                            First Month APY: 16%<br /><br />
+
+                            First Month Period: 30 days<br /><br />
+
+                            Remaining months API: 8% <br /><br />
+
+                            Remaining months: 335 days<br /><br />
+
+                            Minimum Staking 4,000 SNAP<br /><br />
+
+                            Staking Lock Up period: 30 days<br /><br />
+
+                            SNAP Liquidity and Staking Program.<br /><br />
+                          </p>
+                          <a style="padding-top: 2vh; font-size: 1vh">*Earn the highest staking rewards during the first
+                            month.
+
+                            It is delighted to offer the highest-yield staking returns during the first months of the
+                            SnapStake function.
+
+                            Returns of up to 16% will be available during the first month</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 1st Project ends -->
         </div>
       </div>
     </div>
