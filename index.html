@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="SNAPon Staking Pool" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>SNAP</title>
   <style>
     .fab {
@@ -670,6 +671,9 @@
                           color: rgb(255, 255, 255);
                           
                         ">Upcoming Projects</a>
+
+
+
                   </div>
 
 
@@ -698,22 +702,30 @@
                               <p class="card-text2">IDO starts in</p>
                             </div>
                             <div class="col">
-                              <p class="card-text2" style="text-align: right;">5d 04h 06m 21s</p>
+                              <p id="timer1" class="card-text2" style="text-align: right;">5d 04h 06m 21s</p>
                             </div>
                           </div>
                         </div>
                         <div class="card-body">
                           <h4 style="font-weight:700;" class="card-title">Galaxy Fight Club</h4>
+
+
+
                           <h6 style="color: grey;">$GCOIN</h6>
                           <br>
-                          <div class="row">
-                            <div class="col-md-8">
-                              <p class="card-text">Total Raise</p>
-                            </div>
-                            <div class="col-md-4">
-                              <p class="card-text" style="text-align: right;">$2,000,000</p>
+
+
+                          <div class="col-md-8">
+                            <p class="card-text">Total Raise : <span id="1_totalpool">10000</span>/<b>10000</b></p>
+                          </div>
+                          <!-- 1st progres bar -->
+                          <div class="w3-light-grey w3-round-xlarge">
+                            <div id="1_project_progress_bar" class="w3-container w3-round-xlarge w3-blue w3-center"
+                              style="height:24px;width:1%">
                             </div>
                           </div>
+                          
+
                           <div class="row" style="margin-top: 5px;">
                             <div class="col-md-8">
                               <p class="card-text">Personal Allocation</p>
@@ -756,14 +768,18 @@
                           <h4 style="font-weight:700;" class="card-title">SYN CITY</h4>
                           <h6 style="color: grey;">$SYN</h6>
                           <br>
-                          <div class="row">
-                            <div class="col-md-8">
-                              <p class="card-text">Total Raise</p>
-                            </div>
-                            <div class="col-md-4">
-                              <p class="card-text" style="text-align: right;">$500,000</p>
+
+                          <div class="col-md-8">
+                            <p class="card-text">Total Raise : 10000/<b>10000</b></p>
+                          </div>
+                          <!-- 1st progres bar -->
+                          <div class="w3-light-grey w3-round-xlarge">
+                            <div id="2_project_progress_bar" class="w3-container w3-round-xlarge w3-blue w3-center"
+                              style="height:24px;width:1%">
+                              
                             </div>
                           </div>
+
                           <div class="row" style="margin-top: 5px;">
                             <div class="col-md-8">
                               <p class="card-text">Personal Allocation</p>
@@ -804,14 +820,17 @@
                           <h4 style="font-weight:700;" class="card-title">CyberTrade</h4>
                           <h6 style="color: grey;">$CCASH</h6>
                           <br>
-                          <div class="row">
-                            <div class="col-md-8">
-                              <p class="card-text">Total Raise</p>
-                            </div>
-                            <div class="col-md-4">
-                              <p class="card-text" style="text-align: right;">$650,000</p>
+                          
+                          <div class="col-md-8">
+                            <p class="card-text">Total Raise : 10000/<b>10000</b></p>
+                          </div>
+                          <!-- 1st progres bar -->
+                          <div class="w3-light-grey w3-round-xlarge">
+                            <div id="3_project_progress_bar" class="w3-container w3-round-xlarge w3-blue w3-center"
+                              style="height:24px;width:1%">
                             </div>
                           </div>
+
                           <div class="row" style="margin-top: 5px;">
                             <div class="col-md-8">
                               <p class="card-text">Personal Allocation</p>
@@ -1182,17 +1201,7 @@
                       </div>
 
                       <script>
-                        function change_to_me(e, type, number) {
-                          $('.tab-menu').removeClass('act');
-                          $(e).addClass('act');
-                          $('.details').hide();
-
-                          if (type == 'description') {
-                            $('.desc-' + number).fadeIn();
-                          } else {
-                            $('.token-' + number).fadeIn();
-                          }
-                        }
+                        
                       </script>
 
                     </div>
@@ -1223,9 +1232,15 @@
                             </div>
                           </div>
                           <br>
-                          <button style="width: 100%;" class="btn btn-primary app_btn">Application Status</button>
+                          <button id="approve_btn" onclick="approve();" style="width: 100%;" class="btn btn-primary app_btn">Approve</button>
+                          
+                          <div class="form-group" style="margin-top: 10px;">
+                            <input style="background: transparent !important; color: white !important;" required class="form-control" type="text" placeholder="0" id="invest_amt">
+                          </div>
                           <br>
-                          <br>
+                          <button id="invest_btn" onclick="invest();" style="width: 100%;" class="btn btn-primary app_btn">Invest</button>
+                          
+                          <br>                          
                           <br>
                           <div class="mx-auto text-center timer"
                             style="background: #252b37; padding: 10px; border-radius: 10px; margin-bottom: 5px;">

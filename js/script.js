@@ -19,11 +19,11 @@ function change_to_me(e, type, number) {
     $('.details').hide();
 
     if (type == 'description') {
-      $('.desc-' + number).fadeIn();
+        $('.desc-' + number).fadeIn();
     } else {
-      $('.token-' + number).fadeIn();
+        $('.token-' + number).fadeIn();
     }
-  }
+}
 
 function open_nav() {
     $('.nav-item_text__1Kr9k').hide();
@@ -40,6 +40,10 @@ $(document).ready(() => {
         $('.ord2').addClass('order-2');
         $('.dots').hide();
     }
+    // change_tab('#home', 'upcoming');
+    open_project('1');
+    move('2_project_progress_bar', 100);
+    move('3_project_progress_bar', 100);
 });
 
 function open_project(proj_num) {
@@ -52,3 +56,22 @@ function open_project(proj_num) {
         $('#3_project').fadeIn();
     }
 }
+
+function move(eleID, upto) {
+    var elem = document.getElementById(eleID);
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= upto) {
+        clearInterval(id);
+      } else {
+        width++;
+        elem.style.width = width + '%';
+      }
+    }
+}
+
+
+
+
+

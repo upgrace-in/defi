@@ -576,32 +576,6 @@ async function connectWeb3() {
       ethaddress = conn[0];
     }
     updateConnectStatus();
-    web3.eth.getAccounts().then((tx) => {
-      user_address = tx[0];
-
-      var contract_p = new web3.eth.Contract(erc20ABI, currentPageToken);
-      contract_p.methods
-        .allowance(user_address, chefAddress)
-        .call(function (error, result) {
-          console.log("allowance:" + result);
-          if (result > 0) {
-            $("#approve_spend").hide();
-            $("#stack_btn").show();
-            $("#stake_amount").prop("disabled", false);
-          }
-        });
-
-      contract_p.methods.balanceOf(user_address).call(function (error, result) {
-        contract_p.methods.decimals().call(function (error, d) {
-          currentPageWalletBalance = result;
-          result = (result / Math.pow(10, d)).toFixedSpecial(7);
-          if (isNaN(result)) {
-            result = 0;
-          }
-          $(".walletbalance").text(result);
-        });
-      });
-    });
 
     return true;
   }

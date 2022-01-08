@@ -41,7 +41,7 @@
 
 
 .card {
-    height: 27rem;
+    height: auto;
     margin-bottom: 20px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -51,8 +51,12 @@
 
 @media(max-width: 780px) {
     .card {
-        height: 25rem;
+        height: auto !important;
     }
+}
+
+.w3-blue{
+  color: black !important;
 }
 
 .card:hover {
