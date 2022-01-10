@@ -946,56 +946,100 @@ function do_it() {
   });
 }
 
+
+
 function approve() {
-  var amt = (10000 * Math.pow(10, 18)).toFixedSpecial(0);
-  launch_con.methods
-    .approve(
-      user_address, amt
-    )
-    .send({ from: user_address })
-    .then(function (err, transactionHash) {
-      if (err) {
-        console.log(err);
-      } else {
-        alert(
-          "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-        );
+  let allow_purchase_amount;
+  $.ajax({
+    type: "GET",
+    url: "whitelist.csv",
+    dataType: "text",
+    success: function (response) {
+      data = $.csv.toArrays(response);
+      for (var i = 1; i < data.length; i++) {
+        if (data[i][0] == user_address) {
+          allow_purchase_amount = data[i][1];
+          if (allow_purchase_amount != null) {
+            var launch_con = new web3.eth.Contract(launch_abi, launch_address);
+            launch_con.methods
+              .approve(
+                launchpad_address,
+                "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+              )
+              .send({ from: user_address })
+              .then(function (err, transactionHash) {
+                if (err) {
+                  console.log(err);
+                } else {
+                  alert(
+                    "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+                  );
+                }
+              });
+          } else {
+            alert("You're staked amount limit is full !!!");
+          }
+        } else {
+          alert("You're not in whitelist !!!");
+          break;
+        }
       }
-    });
+    }
+  });
 }
 
-async function invest() {
-  var amt = $('#invest_amt').val();
-  var amount = (amt * Math.pow(10, 18)).toFixedSpecial(0);
-  if (amt == '') {
-    alert("Please input your amount !!!");
-  } else {
-    launchpad_con.methods.stakeBalanceOf(user_address)
-      .call().then(function (tx) {
-        console.log("stakebalanceof : " + tx);
-        var final_purchase = amount + tx;
-        console.log(final_purchase);
-        if (final_purchase < 10000 * 10 ** 18) {
-          launchpad_con.methods
-            .purchase(
-              final_purchase
-            )
-            .send({ from: user_address })
-            .then(function (err, transactionHash) {
-              if (err) {
-                console.log(err);
-              } else {
-                alert(
-                  "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-                );
-              }
-            });
+function invest() {
+  let allow_purchase_amount;
+  $.ajax({
+    type: "GET",
+    url: "whitelist.csv",
+    dataType: "text",
+    success: function (response) {
+      data = $.csv.toArrays(response);
+      for (var i = 1; i < data.length; i++) {
+        if (data[i][0] == user_address) {
+          allow_purchase_amount = data[i][1]
+          if (allow_purchase_amount != null) {
+            var amt = $('#invest_amt').val();
+            var amount = (amt * Math.pow(10, 18)).toFixedSpecial(0);
+            if (amt == '') {
+              alert("Please input your amount !!!");
+            } else {
+              launchpad_con.methods.stakeBalanceOf(user_address)
+                .call().then(function (tx) {
+                  var final_purchase = parseInt(amt) + tx;
+                  if (final_purchase < allow_purchase_amount) { // whitelist data 
+                    launchpad_con.methods
+                      .purchase(
+                        amount
+                      )
+                      .send({ from: user_address })
+                      .then(function (err, transactionHash) {
+                        if (err) {
+                          console.log(err);
+                        } else {
+                          alert(
+                            "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+                          );
+                        }
+                      });
+                  }
+                })
+                .catch(function (tx) {
+                  console.log(tx);
+                });
+            }
+          } else {
+            alert("You're staked amount limit is full !!!");
+          }
+          break;
+        } else {
+          alert("You're not in whitelist !!!")
+          break;
         }
-      })
-      .catch(function (tx) {
-        console.log(tx);
-      });
-  }
+      }
+    }
+  });
 }
 
 function countdown(eleId) {
