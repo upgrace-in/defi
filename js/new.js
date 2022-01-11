@@ -916,6 +916,7 @@ var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
 var launch_con = new web3.eth.Contract(launch_abi, launch_address);
 
 function do_it() {
+
   web3.eth.getAccounts().then(function (accounts) {
     var acc = accounts[0];
     user_address = acc;
@@ -988,7 +989,7 @@ function approve() {
   });
 }
 
-function invest() {
+function investfinal() {
   let allow_purchase_amount;
   $.ajax({
     type: "GET",
@@ -1001,18 +1002,16 @@ function invest() {
           allow_purchase_amount = data[i][1]
           if (allow_purchase_amount != null) {
             var amt = $('#invest_amt').val();
-            var amount = (amt * Math.pow(10, 18)).toFixedSpecial(0);
             if (amt == '') {
               alert("Please input your amount !!!");
             } else {
               launchpad_con.methods.stakeBalanceOf(user_address)
                 .call().then(function (tx) {
                   var final_purchase = parseInt(amt) + tx;
-                  if (final_purchase < allow_purchase_amount) { // whitelist data 
+                  if (final_purchase < allow_purchase_amount) {
+                    var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
                     launchpad_con.methods
-                      .purchase(
-                        amount
-                      )
+                      .purchase(String(amount))
                       .send({ from: user_address })
                       .then(function (err, transactionHash) {
                         if (err) {
