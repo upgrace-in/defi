@@ -989,7 +989,7 @@ function approve() {
   });
 }
 
-function investfinal() {
+function invest() {
   let allow_purchase_amount;
   $.ajax({
     type: "GET",
