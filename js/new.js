@@ -919,34 +919,38 @@ function do_it() {
 
   web3.eth.getAccounts().then(function (accounts) {
     var acc = accounts[0];
-    user_address = acc;
-    $(".user_address").html(acc);
+    if (acc) {
+      user_address = acc;
+      $(".user_address").html(acc);
 
-    launchpad_con.methods.totalpoolstacked
-      .call()
-      .call()
-      .then(function (tx) {
-        var fin = tx * 100 / 10000;
-        move('1_project_progress_bar', fin);
-        $("#1_totalpool").html(fin);
-      })
-      .catch(function (tx) {
-        console.log(tx);
-      });
+      launchpad_con.methods.totalpoolstacked
+        .call()
+        .call()
+        .then(function (tx) {
+          var fin = tx * 100 / 10000;
+          move('1_project_progress_bar', fin);
+          $("#1_totalpool").html(fin);
+        })
+        .catch(function (tx) {
+          console.log(tx);
+        });
 
-    launch_con.methods
-      .allowance(user_address, launch_address)
-      .call(function (error, result) {
-        console.log("allowance:" + result);
-        if (result > 0) {
-          $("#approve_btn").hide();
-          $('#invest_field').show();
-          $("#invest_btn").show();
-        }
-      });
-
+      launch_con.methods
+        .allowance(user_address, launch_address)
+        .call(function (error, result) {
+          if (result > 0) {
+            $("#approve_btn").hide();
+            $('#invest_field').show();
+            $("#invest_btn").show();
+          }
+        });
+    } else {
+      $(".user_address").html('');
+    }
   });
 }
+
+
 
 
 
@@ -1047,7 +1051,7 @@ function invest() {
   });
 }
 
-var final_date = "Jan 11, 2022 15:37:25";
+var final_date = "Jan 12, 2022 15:37:25";
 
 function countdown2(d, h, m, s) {
   var countDownDate = new Date(final_date).getTime();
@@ -1106,4 +1110,7 @@ $(document).ready(function () {
   do_it();
   countdown("timer1")
   countdown2('1_day', '1_hour', '1_mins', '1_sec');
+  setInterval(() => {
+    do_it();
+  }, 1000)
 });
