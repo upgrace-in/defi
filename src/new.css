@@ -49,6 +49,11 @@
     border: none;
 }
 
+#approve_btn, #invest_field, #invest_btn{
+  display: none;
+  width: 100%;
+}
+
 @media(max-width: 780px) {
     .card {
         height: auto !important;
@@ -117,6 +122,7 @@ ul > li{
 }
 
 .c2{
+  padding-bottom: 40px;
   width: 20rem; 
   height: auto !important;
 }

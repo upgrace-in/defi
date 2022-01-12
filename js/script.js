@@ -38,10 +38,10 @@ $(document).ready(() => {
     if ($(window).width() < 780) {
         $('.ord1').addClass('order-1');
         $('.ord2').addClass('order-2');
-        $('.dots').hide();
+        $('#dots').hide();
     }
     // change_tab('#home', 'upcoming');
-    open_project('1');
+    // open_project('1');
     move('2_project_progress_bar', 100);
     move('3_project_progress_bar', 100);
 });

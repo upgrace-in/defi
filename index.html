@@ -1202,10 +1202,6 @@
                         </table>
                       </div>
 
-                      <script>
-                        
-                      </script>
-
                     </div>
 
                     <!-- Second Part -->
@@ -1235,45 +1231,33 @@
                               <p class="card-text" style="text-align: right;">$0.5</p>
                             </div>
                           </div>
-                          <br>
-                          <button id="approve_btn" onclick="approve();" style="width: 100%;" class="btn btn-primary app_btn">Approve</button>
+                          <button style="margin-top: 5px;" id="approve_btn" onclick="approve();" style="width: 100%;" class="btn btn-primary app_btn">Approve</button>
                           
-                          <div class="form-group" style="margin-top: 10px;">
+                          <div id="invest_field" class="form-group" style="margin-top: 10px;">
                             <input style="background: transparent !important; color: white !important;" required class="form-control" type="text" placeholder="0" id="invest_amt">
                           </div>
-                          <br>
-                          <button id="invest_btn" onclick="invest();" style="width: 100%;" class="btn btn-primary app_btn">Invest</button>
-                          
-                          <br>                          
+                          <button style="margin-top: 10px;" id="invest_btn" onclick="invest();" style="width: 100%;" class="btn btn-primary app_btn">Invest</button>
+                                              
                           <br>
                           <div class="mx-auto text-center timer"
-                            style="background: #252b37; padding: 10px; border-radius: 10px; margin-bottom: 5px;">
+                            style="background: #252b37; padding: 10px; border-radius: 10px;">
                             <h6 style="color:#787878; letter-spacing: 0.3rem;">SALE STARTS IN</h6>
                             <br>
                             <div class="row rw mx-auto text-center" style="display: flex;">
-                              <div class="col-md-2">
-                                <h4 class="tim1">04</h4>
+                              <div class="col-md-3 mx-auto text-center">
+                                <h4 id="1_day" class="tim1">04</h4>
                                 <span class="gr">Days</span>
                               </div>
-                              <div class="dots col-md">
-                                <span style="color: grey; font-size: 0.8rem;">:</span>
-                              </div>
-                              <div class="col-md-2">
-                                <h4 class="tim1">07</h4>
+                              <div class="col-md-3 mx-auto text-center">
+                                <h4 id="1_hour" class="tim1">07</h4>
                                 <span class="gr">Hours</span>
                               </div>
-                              <div class="dots col-md">
-                                <span style="color: grey; font-size: 0.8rem;">:</span>
-                              </div>
-                              <div class="col-md-2">
-                                <h4 class="tim1">23</h4>
+                              <div class="col-md-3 mx-auto text-center">
+                                <h4 id="1_mins" class="tim1">23</h4>
                                 <span class="gr" style="font-size: 1vh;">Minutes</span>
                               </div>
-                              <div class="dots col-md">
-                                <span style="color: grey; font-size: 0.8rem;">:</span>
-                              </div>
-                              <div class="col-md-2">
-                                <h4 class="tim1">09</h4>
+                              <div class="col-md-3 mx-auto text-center">
+                                <h4 id="1_sec" class="tim1">09</h4>
                                 <span class="gr" style="font-size: 1vh;">Seconds</span>
                               </div>
                             </div>
@@ -1282,7 +1266,6 @@
                       </div>
                     </div>
                   </div>
-                  <br>
                 </div>
               </div>
             </div>

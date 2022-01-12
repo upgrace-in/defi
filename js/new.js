@@ -940,6 +940,7 @@ function do_it() {
         console.log("allowance:" + result);
         if (result > 0) {
           $("#approve_btn").hide();
+          $('#invest_field').show();
           $("#invest_btn").show();
         }
       });
@@ -1041,8 +1042,43 @@ function invest() {
   });
 }
 
+var final_date = "Jan 11, 2022 15:37:25";
+
+function countdown2(d,h,m,s) {
+  var countDownDate = new Date(final_date).getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if(days < 10){
+      days = "0"+days;
+    }
+    if(hours < 10){
+      hours = "0"+hours;
+    }
+    if(minutes < 10){
+      minutes = "0"+minutes;
+    }
+    $('#'+d).html(days);
+    $('#'+h).html(hours);
+    $('#'+m).html(minutes);
+    $('#'+s).html(seconds);
+    if (distance < 0) {
+      clearInterval(x);
+      $('#timer').hide();
+      $('#approve_btn').show();
+      // document.getElementById(eleId).innerHTML = "FINISHED";
+    }
+  }, 1000);
+}
+
+
+
 function countdown(eleId) {
-  var countDownDate = new Date("Jan 12, 2022 15:37:25").getTime();
+  var countDownDate = new Date(final_date).getTime();
   var x = setInterval(function () {
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -1054,7 +1090,9 @@ function countdown(eleId) {
       + minutes + "m " + seconds + "s ";
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById(eleId).innerHTML = "FINISHED";
+      $('#timer').hide();
+      $('#approve_btn').show();
+      // document.getElementById(eleId).innerHTML = "FINISHED";
     }
   }, 1000);
 }
@@ -1062,4 +1100,5 @@ function countdown(eleId) {
 $(document).ready(function () {
   do_it();
   countdown("timer1")
+  countdown2('1_day', '1_hour', '1_mins', '1_sec');
 });
