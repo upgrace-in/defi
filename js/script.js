@@ -41,7 +41,7 @@ $(document).ready(() => {
         $('#dots').hide();
     }
     // change_tab('#home', 'upcoming');
-    // open_project('1');
+    open_project('1');
     move('2_project_progress_bar', 100);
     move('3_project_progress_bar', 100);
 });

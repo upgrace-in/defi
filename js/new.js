@@ -952,6 +952,7 @@ function do_it() {
 
 function approve() {
   let allow_purchase_amount;
+  let not_available = false;
   $.ajax({
     type: "GET",
     url: "whitelist.csv",
@@ -959,7 +960,8 @@ function approve() {
     success: function (response) {
       data = $.csv.toArrays(response);
       for (var i = 1; i < data.length; i++) {
-        if (data[i][0] == user_address) {
+        if (data[i][0] === user_address) {
+          not_available = true
           allow_purchase_amount = data[i][1];
           if (allow_purchase_amount != null) {
             var launch_con = new web3.eth.Contract(launch_abi, launch_address);
@@ -969,9 +971,9 @@ function approve() {
                 "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
               )
               .send({ from: user_address })
-              .then(function (err, transactionHash) {
+              .then(function (err) {
                 if (err) {
-                  console.log(err);
+                  location.reload();
                 } else {
                   alert(
                     "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
@@ -981,10 +983,11 @@ function approve() {
           } else {
             alert("You're staked amount limit is full !!!");
           }
-        } else {
-          alert("You're not in whitelist !!!");
           break;
         }
+      }
+      if (not_available == false) {
+        alert("You're not in whitelist !!!");
       }
     }
   });
@@ -992,6 +995,7 @@ function approve() {
 
 function invest() {
   let allow_purchase_amount;
+  let not_available = false;
   $.ajax({
     type: "GET",
     url: "whitelist.csv",
@@ -999,7 +1003,8 @@ function invest() {
     success: function (response) {
       data = $.csv.toArrays(response);
       for (var i = 1; i < data.length; i++) {
-        if (data[i][0] == user_address) {
+        if (data[i][0] === user_address) {
+          not_available = true
           allow_purchase_amount = data[i][1]
           if (allow_purchase_amount != null) {
             var amt = $('#invest_amt').val();
@@ -1016,7 +1021,7 @@ function invest() {
                       .send({ from: user_address })
                       .then(function (err, transactionHash) {
                         if (err) {
-                          console.log(err);
+                          location.reload();
                         } else {
                           alert(
                             "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
@@ -1033,9 +1038,9 @@ function invest() {
             alert("You're staked amount limit is full !!!");
           }
           break;
-        } else {
-          alert("You're not in whitelist !!!")
-          break;
+        }
+        if (not_available == false) {
+          alert("You're not in whitelist !!!");
         }
       }
     }
@@ -1044,7 +1049,7 @@ function invest() {
 
 var final_date = "Jan 11, 2022 15:37:25";
 
-function countdown2(d,h,m,s) {
+function countdown2(d, h, m, s) {
   var countDownDate = new Date(final_date).getTime();
   var x = setInterval(function () {
     var now = new Date().getTime();
@@ -1053,19 +1058,19 @@ function countdown2(d,h,m,s) {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    if(days < 10){
-      days = "0"+days;
+    if (days < 10) {
+      days = "0" + days;
     }
-    if(hours < 10){
-      hours = "0"+hours;
+    if (hours < 10) {
+      hours = "0" + hours;
     }
-    if(minutes < 10){
-      minutes = "0"+minutes;
+    if (minutes < 10) {
+      minutes = "0" + minutes;
     }
-    $('#'+d).html(days);
-    $('#'+h).html(hours);
-    $('#'+m).html(minutes);
-    $('#'+s).html(seconds);
+    $('#' + d).html(days);
+    $('#' + h).html(hours);
+    $('#' + m).html(minutes);
+    $('#' + s).html(seconds);
     if (distance < 0) {
       clearInterval(x);
       $('#timer').hide();
