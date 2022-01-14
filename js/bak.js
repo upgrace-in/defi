@@ -1,5 +1,5 @@
 var web3, user_address;
-var whitelist_arr = new Array();
+var whitelist_arr = new Array(); 
 
 launch_address = "0xd6ad430f6e10dc926218e1864ab9e78b3e8dd607";
 launchpad_address = "0x31e6a7864540d0ccedb19ae86857d1bd95127c89"
@@ -955,7 +955,7 @@ function do_it() {
   });
 }
 
-function make_arr() {
+function make_arr(){
   $.ajax({
     type: "GET",
     url: "whitelist.csv",
@@ -975,82 +975,98 @@ function make_arr() {
 function approve() {
   let allow_purchase_amount;
   let not_available = false;
-  for (var i = 0; i < whitelist_arr.length; i++) {
-    if (whitelist_arr[i][0] === user_address) {
-      not_available = true
-      allow_purchase_amount = whitelist_arr[i][1];
-      if (allow_purchase_amount != null) {
-        var launch_con = new web3.eth.Contract(launch_abi, launch_address);
-        launch_con.methods
-          .approve(
-            user_address,
-            "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-          )
-          .send({ from: user_address })
-          .then(function (err) {
-            if (err) {
-              location.reload();
-            } else {
-              alert(
-                "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-              );
-            }
-          });
-      } else {
-        alert("You're staked amount limit is full !!!");
+  $.ajax({
+    type: "GET",
+    url: "whitelist.csv",
+    dataType: "text",
+    success: function (response) {
+      data = $.csv.toArrays(response);
+      for (var i = 1; i < data.length; i++) {
+        if (data[i][0] === user_address) {
+          not_available = true
+          allow_purchase_amount = data[i][1];
+          if (allow_purchase_amount != null) {
+            var launch_con = new web3.eth.Contract(launch_abi, launch_address);
+            launch_con.methods
+              .approve(
+                user_address,
+                "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+              )
+              .send({ from: user_address })
+              .then(function (err) {
+                if (err) {
+                  location.reload();
+                } else {
+                  alert(
+                    "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+                  );
+                }
+              });
+          } else {
+            alert("You're staked amount limit is full !!!");
+          }
+          break;
+        }
       }
-      break;
+      if (not_available == false) {
+        alert("You're not in whitelist !!!");
+      }
     }
-  }
-  if (not_available == false) {
-    alert("You're not in whitelist !!!");
-  }
+  });
 }
 
 function invest() {
   let allow_purchase_amount;
   let not_available = false;
-  for (var i = 0; i < whitelist_arr.length; i++) {
-    if (whitelist_arr[i][0] === user_address) {
-      not_available = true
-      allow_purchase_amount = whitelist_arr[i][1]
-      if (allow_purchase_amount != null) {
-        var amt = $('#invest_amt').val();
-        if (amt == '') {
-          alert("Please input your amount !!!");
-        } else {
-          launchpad_con.methods.stakeBalanceOf(user_address)
-            .call().then(function (tx) {
-              var final_purchase = parseInt(amt) + tx;
-              if (final_purchase < allow_purchase_amount) {
-                var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
-                launchpad_con.methods
-                  .purchase(String(amt))
-                  .send({ from: user_address })
-                  .then(function (err, transactionHash) {
-                    if (err) {
-                      location.reload();
-                    } else {
-                      alert(
-                        "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-                      );
-                    }
-                  });
-              }
-            })
-            .catch(function (tx) {
-              console.log(tx);
-            });
+  $.ajax({
+    type: "GET",
+    url: "whitelist.csv",
+    dataType: "text",
+    success: function (response) {
+      data = $.csv.toArrays(response);
+      for (var i = 1; i < data.length; i++) {
+        if (data[i][0] === user_address) {
+          not_available = true
+          allow_purchase_amount = data[i][1]
+          if (allow_purchase_amount != null) {
+            var amt = $('#invest_amt').val();
+            if (amt == '') {
+              alert("Please input your amount !!!");
+            } else {
+              launchpad_con.methods.stakeBalanceOf(user_address)
+                .call().then(function (tx) {
+                  var final_purchase = parseInt(amt) + tx;
+                  if (final_purchase < allow_purchase_amount) {
+                    var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
+                    launchpad_con.methods
+                      .purchase(String(amt))
+                      .send({ from: user_address })
+                      .then(function (err, transactionHash) {
+                        if (err) {
+                          location.reload();
+                        } else {
+                          alert(
+                            "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+                          );
+                        }
+                      });
+                  }
+                })
+                .catch(function (tx) {
+                  console.log(tx);
+                });
+            }
+          } else {
+            alert("You're staked amount limit is full !!!");
+          }
+          break;
         }
-      } else {
-        alert("You're staked amount limit is full !!!");
       }
-      break;
+      if (not_available == false) {
+        alert("You're not in whitelist !!!");
+      }
     }
-  }
-  if (not_available == false) {
-    alert("You're not in whitelist !!!");
-  }
+  });
 }
 
 var final_date = "Jan 12, 2022 15:37:25";
