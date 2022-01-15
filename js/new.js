@@ -937,7 +937,7 @@ function do_it() {
         });
 
       launch_con.methods
-        .allowance(launch_address, user_address)
+        .allowance(user_address, user_address)
         .call(function (error, result) {
           console.log(result);
           if (result > 0) {
@@ -947,8 +947,8 @@ function do_it() {
           }
         });
 
-      $('#invest_field').show();
-      $("#invest_btn").show();
+      // $('#invest_field').show();
+      // $("#invest_btn").show();
     } else {
       $(".user_address").html('');
     }
