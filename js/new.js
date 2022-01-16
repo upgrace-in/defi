@@ -928,8 +928,9 @@ function do_it() {
         .call()
         .call()
         .then(function (tx) {
-          var fin = tx * 100 / 10000;
-          move('1_project_progress_bar', fin);
+          var fin = parseInt(tx)/10**18;
+          up = (fin*100/10000)
+          move('1_project_progress_bar', up);
           $("#1_totalpool").html(fin);
         })
         .catch(function (tx) {
@@ -939,7 +940,6 @@ function do_it() {
       launch_con.methods
         .allowance(user_address, user_address)
         .call(function (error, result) {
-          console.log(result);
           if (result > 0) {
             $("#approve_btn").hide();
             $('#invest_field').show();
@@ -1114,5 +1114,4 @@ $(document).ready(function () {
   setInterval(() => {
     do_it();
   }, 1000)
-  make_arr();
 });
