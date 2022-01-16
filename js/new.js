@@ -1114,4 +1114,5 @@ $(document).ready(function () {
   setInterval(() => {
     do_it();
   }, 1000)
+  make_arr();
 });
