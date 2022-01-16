@@ -1,8 +1,9 @@
-var web3, user_address;
+var web3, user_address, whitelisted, allow_purchase_amount;
 var whitelist_arr = new Array();
 
 launch_address = "0xd6ad430f6e10dc926218e1864ab9e78b3e8dd607";
 launchpad_address = "0x81090EA6A3A556Af7729Ecd77a681313f11F3a60"
+var final_date = "Jan 12, 2022 15:37:25";
 
 launch_abi = [
   {
@@ -913,11 +914,25 @@ launchpad_abi =
     }
   ]
 
+
 var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
 var launch_con = new web3.eth.Contract(launch_abi, launch_address);
 
-function do_it() {
+function allowance() {
+  $('.timer').hide();
+  launch_con.methods
+    .allowance(user_address, launchpad_address)
+    .call(function (error, result) {
+      if (result > 0) {
+        $('#invest_field').show();
+        $("#invest_btn").show();
+      } else {
+        $("#approve_btn").show();
+      }
+    });
+}
 
+function do_it() {
   web3.eth.getAccounts().then(function (accounts) {
     var acc = accounts[0];
     if (acc) {
@@ -928,31 +943,34 @@ function do_it() {
         .call()
         .call()
         .then(function (tx) {
-          var fin = parseInt(tx)/10**18;
-          up = (fin*100/10000)
-          move('1_project_progress_bar', up);
-          $("#1_totalpool").html(fin);
+          if (parseInt(tx) === 10000) {
+            $('#invest_field').hide();
+            $("#invest_btn").hide();
+          } else {
+            var fin = parseInt(tx) / 10 ** 18;
+            up = (fin * 100 / 10000)
+            move('1_project_progress_bar', up);
+            $("#1_totalpool").html(fin);
+          }
         })
         .catch(function (tx) {
           console.log(tx);
         });
 
-      launch_con.methods
-        .allowance(user_address, user_address)
-        .call(function (error, result) {
-          if (result > 0) {
-            $("#approve_btn").hide();
-            $('#invest_field').show();
-            $("#invest_btn").show();
-          }
-        });
-
-      // $('#invest_field').show();
-      // $("#invest_btn").show();
     } else {
-      $(".user_address").html('');
+      $(".user_address").html('0x0000000000000000000000000000000000000000');
     }
   });
+}
+
+function check_if_whitelisted() {
+  for (var i = 0; i < whitelist_arr.length; i++) {
+    if (whitelist_arr[i][0] === user_address) {
+      whitelisted = true;
+      allow_purchase_amount = whitelist_arr[i][1];
+      break;
+    }
+  }
 }
 
 function make_arr() {
@@ -965,7 +983,9 @@ function make_arr() {
       for (var i = 1; i < data.length; i++) {
         whitelist_arr.push([data[i][0], data[i][1]])
       };
-      console.log(whitelist_arr);
+      setTimeout(() => {
+        check_if_whitelisted();
+      }, 2000);
     }
   });
 }
@@ -973,88 +993,72 @@ function make_arr() {
 
 
 function approve() {
-  let allow_purchase_amount;
-  let not_available = false;
-  for (var i = 0; i < whitelist_arr.length; i++) {
-    if (whitelist_arr[i][0] === user_address) {
-      not_available = true
-      allow_purchase_amount = whitelist_arr[i][1];
-      if (allow_purchase_amount != null) {
-        var launch_con = new web3.eth.Contract(launch_abi, launch_address);
-        launch_con.methods
-          .approve(
-            "0x81090EA6A3A556Af7729Ecd77a681313f11F3a60",
-            "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-          )
-          .send({ from: user_address })
-          .then(function (err) {
-            if (err) {
-              location.reload();
-            } else {
-              alert(
-                "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-              );
-            }
-          });
-      } else {
-        alert("You're staked amount limit is full !!!");
-      }
-      break;
+  if (whitelisted == true) {
+    if (allow_purchase_amount != null) {
+      var launch_con = new web3.eth.Contract(launch_abi, launch_address);
+      launch_con.methods
+        .approve(
+          "0x81090EA6A3A556Af7729Ecd77a681313f11F3a60",
+          "1000000000000000000000000000000000000000000"
+        )
+        .send({ from: user_address })
+        .then(function (err) {
+          if (err) {
+            location.reload();
+          } else {
+            alert(
+              "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+            );
+          }
+        });
+    } else {
+      alert("You're staked amount limit is full !!!");
     }
-  }
-  if (not_available == false) {
+  } else {
     alert("You're not in whitelist !!!");
   }
 }
 
 function invest() {
-  let allow_purchase_amount;
-  let not_available = false;
-  for (var i = 0; i < whitelist_arr.length; i++) {
-    if (whitelist_arr[i][0] === user_address) {
-      not_available = true
-      allow_purchase_amount = whitelist_arr[i][1]
-      if (allow_purchase_amount != null) {
-        var amt = $('#invest_amt').val();
-        if (amt == '') {
-          alert("Please input your amount !!!");
-        } else {
-          launchpad_con.methods.stakeBalanceOf(user_address)
-            .call().then(function (tx) {
-              var final_purchase = parseInt(amt) + tx;
-              if (final_purchase < allow_purchase_amount) {
-                var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
-                amt = amt*10**18;
-                launchpad_con.methods
-                  .purchase(String(amt))
-                  .send({ from: user_address })
-                  .then(function (err, transactionHash) {
-                    if (err) {
-                      location.reload();
-                    } else {
-                      alert(
-                        "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
-                      );
-                    }
-                  });
-              }
-            })
-            .catch(function (tx) {
-              console.log(tx);
-            });
-        }
+  var amt = $('#invest_amt').val();
+  if (whitelisted == true) {
+    if (allow_purchase_amount != null) {
+      if (amt == '') {
+        alert("Please input your amount !!!");
       } else {
-        alert("You're staked amount limit is full !!!");
+        var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
+        launchpad_con.methods.stakeBalanceOf(user_address)
+          .call().then(function (tx) {
+            var final_purchase = parseInt(amt) + parseInt(tx);
+            if (final_purchase < allow_purchase_amount) {
+              amt = amt * 10 ** 18;
+              launchpad_con.methods
+                .purchase(String(amt))
+                .send({ from: user_address })
+                .then(function (err, transactionHash) {
+                  if (err) {
+                    location.reload();
+                  } else {
+                    alert(
+                      "Please wait until the approve transaction confirm to stake your pool token. You can refresh the page to update."
+                    );
+                  }
+                });
+            }
+          })
+          .catch(function (tx) {
+            console.log(tx);
+          });
       }
-      break;
+    } else {
+      alert("You're staked amount limit is full !!!");
     }
-  }
-  if (not_available == false) {
+  } else {
     alert("You're not in whitelist !!!");
   }
 }
 
-var final_date = "Jan 12, 2022 15:37:25";
+
 
 function countdown2(d, h, m, s) {
   var countDownDate = new Date(final_date).getTime();
@@ -1080,9 +1084,7 @@ function countdown2(d, h, m, s) {
     $('#' + s).html(seconds);
     if (distance < 0) {
       clearInterval(x);
-      $('#timer').hide();
-      $('#approve_btn').show();
-      // document.getElementById(eleId).innerHTML = "FINISHED";
+      allowance();
     }
   }, 1000);
 }
@@ -1102,18 +1104,17 @@ function countdown(eleId) {
       + minutes + "m " + seconds + "s ";
     if (distance < 0) {
       clearInterval(x);
-      $('.timer').hide();
-      $('#approve_btn').show();
+      allowance();
     }
   }, 1000);
 }
 
 $(document).ready(function () {
+  window.ethereum.on('accountsChanged', function (accounts) {
+    location.reload();
+  });
   do_it();
   countdown("timer1")
   countdown2('1_day', '1_hour', '1_mins', '1_sec');
-  setInterval(() => {
-    do_it();
-  }, 1000)
   make_arr();
 });

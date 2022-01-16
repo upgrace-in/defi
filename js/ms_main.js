@@ -543,7 +543,6 @@ async function connectWeb3() {
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     conn = await window.ethereum.enable();
-    console.log(conn.length);
 
     window.ethereum.on("networkChanged", function (networkId) {
       web3.eth.net.getNetworkType().then(function (e) {
