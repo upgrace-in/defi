@@ -2,7 +2,7 @@ var web3, user_address;
 var whitelist_arr = new Array();
 
 launch_address = "0xd6ad430f6e10dc926218e1864ab9e78b3e8dd607";
-launchpad_address = "0x31e6a7864540d0ccedb19ae86857d1bd95127c89"
+launchpad_address = "0x81090EA6A3A556Af7729Ecd77a681313f11F3a60"
 
 launch_abi = [
   {
