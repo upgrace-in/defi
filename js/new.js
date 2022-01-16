@@ -1024,6 +1024,7 @@ function invest() {
               var final_purchase = parseInt(amt) + tx;
               if (final_purchase < allow_purchase_amount) {
                 var launchpad_con = new web3.eth.Contract(launchpad_abi, launchpad_address);
+                amt = amt*10**18;
                 launchpad_con.methods
                   .purchase(String(amt))
                   .send({ from: user_address })

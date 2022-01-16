@@ -42,8 +42,6 @@ $(document).ready(() => {
     }
     // change_tab('#home', 'upcoming');
     open_project('1');
-    move('2_project_progress_bar', 100);
-    move('3_project_progress_bar', 100);
 });
 
 function open_project(proj_num) {
@@ -62,12 +60,12 @@ function move(eleID, upto) {
     var width = 1;
     var id = setInterval(frame, 10);
     function frame() {
-      if (width >= upto) {
-        clearInterval(id);
-      } else {
-        width++;
-        elem.style.width = width + '%';
-      }
+        if (width >= upto) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
     }
 }
 
